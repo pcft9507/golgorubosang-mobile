@@ -1,0 +1,29 @@
+.main {
+
+  .main-visual {
+
+    .visual-slogan {
+      position: absolute;
+      top: 76px;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      padding-left: 16px;
+
+      .main-visual-tit {
+        color: #00FF89;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 2.24px;
+        line-height: 19px;
+        text-shadow: 0px 1px 1px #05050533;
+      }
+    }
+
+    .visual-btn {
+      --height: 42px;
+    }
+
+  }
+}
+

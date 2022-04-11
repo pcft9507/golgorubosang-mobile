@@ -1,0 +1,159 @@
+@charset 'utf-8';
+
+@import 'font.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+  font-style: normal;
+}
+
+body {
+  font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: 'S-CoreDream', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+table caption {
+  position: absolute;
+  left: -99999999vw;
+}
+
+*::placeholder {
+  color: #c4c4c4;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+figcaption {
+  height: 0;
+  overflow: hidden;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+  table-layout: fixed;
+}   
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.is-blind {
+  position: absolute;
+  left: -9999em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+[class*="d-flex"] {
+  display: flex;
+
+  &.f-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.d-flex {
+  &-s-s {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &-s-c {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &-s-e {
+    justify-content: flex-start;
+    align-items: end;
+  }
+  &-c-s {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &-c-c {
+    justify-content: center;
+    align-items: center;
+  }
+  &-c-e {
+    justify-content: center;
+    align-items: end;
+  }
+  &-e-s {
+    justify-content: end;
+    align-items: flex-start;
+  }
+  &-e-c {
+    justify-content: end;
+    align-items: center;
+  }
+  &-e-e {
+    justify-content: end;
+    align-items: end;
+  }
+  &-sb-s {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &-sb-c {
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-sb-e {
+    justify-content: space-between;
+    align-items: end;
+  }
+}
+
+.tac {
+  text-align: center !important;
+}
+
+.ovh {
+  overflow: hidden;
+}
+

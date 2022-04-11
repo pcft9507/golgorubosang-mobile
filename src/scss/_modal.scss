@@ -1,0 +1,478 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+
+  &.show {
+    display: block;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+
+    &.w-m {
+      width: 894px;
+    }
+
+    &.w-s {
+      width: 794px;
+    }
+  }
+
+  &__inner {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+
+    &.bg-none {
+      background: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: -42px;
+    right: -42px;
+    z-index: 1;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(248, 249, 250, 0.2);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, -50%);
+      background: url($imgCommon + 'sprites-modal.png') 0 -20px/20px no-repeat;
+    }
+
+    &:hover {
+      background: #fff;
+
+      &::before {
+        background-position: 0 0;
+      }      
+    }
+  }
+
+  // 추천서비스팝업
+  .rcmd {
+
+    .rcmd-slogan {
+      width: 286px;
+      background: $themeColor03;
+    }
+
+    .rcmd-select {
+      width: 608px;
+      padding-top: 66px;
+      background: #f2f2f3;
+
+      .select-tit {
+        color: #050505;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1em;
+        letter-spacing: -0.45px;
+        text-align: center;
+      }
+
+      .select-sub-tit {
+        margin-top: 10px;
+        color: #050505;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1em;
+        letter-spacing: -0.35px;
+        text-align: center;
+      }
+
+      .select-col-wrap {
+        margin-top: 45px;
+        padding: 0 46px 0 37px;
+      }
+
+      .select-col {
+
+        .col-tit {
+          color: #050505;
+          font-size: 1em;
+        }
+
+        .chipList {
+          margin-top: 14px;
+
+          &__item {
+            margin: 6px 2px 0;
+          }
+        }
+      }
+
+      .btn-wrap {
+        display: flex;
+
+        .btn-apply {
+          width: 204px;
+          height: 48px;
+          padding-left: 28px;
+          box-sizing: border-box;
+          background: $themeColor03;
+          border-radius: 24px 0 0 24px;
+        }
+
+        .btn-txt {
+          color: #fff;
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  // 접수 1단계
+  .reception-guide {
+    padding: 80px 50px;
+
+    .title {
+      color: $themeColor03;
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 1em;
+      letter-spacing: -0.95px;
+    }
+
+    .sub-tit {
+      margin-top: 15px;
+      color: $themeColor01;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 1em;
+      letter-spacing: -0.45px;
+    }
+
+    .txt01 {
+      margin-top: 60px;
+      padding-top: 170px;
+      color: #394048;
+      font-size: 13px;
+      font-weight: 200;
+      letter-spacing: -0.33px;
+      background: url($imgModal + 'modal-receipt-guide.jpg') 50% 0/auto 111px no-repeat;
+    }
+
+    .txt02 {
+      margin-top: 15px;
+
+      &-sub {
+        display: inline-block;
+        color: #050505;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: -0.33px;
+        border-bottom: 1px solid #050505;
+      }
+    }
+
+    .chipList {
+      margin: 48px 0 0 -8px;
+
+      &__item {
+        margin: 12px 0 0 8px;
+      }
+    }
+  }
+
+  // 접수 2단계
+  .reception-form {
+
+    .reception-form-head {
+      height: 130px;
+      padding-left: 48px;
+      border-bottom: 1px solid #dadada;
+  
+      .title {
+        padding-top: 40px;
+        color: $themeColor03;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1em;
+        letter-spacing: -0.45px;
+  
+        .theme02 {
+          margin-left: 5px;
+          color: $themeColor02;
+        }
+  
+        .italic {
+          color: inherit;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 1em;
+          font-style: italic;
+        }
+      }
+  
+      .sub-tit {
+        margin-top: 15px;
+        color: #394048;
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 1em;
+        letter-spacing: -0.33px;
+      }
+    }
+
+    .form {
+      max-height: 464px;
+      padding: 36px 50px;
+      background: #f2f2f3;
+      box-sizing: border-box;
+
+      .textArea__text {
+        height: 120px;
+      }
+    }
+
+    .reception-form-foot {
+      height: 172px;
+      padding: 20px 0 0;
+      box-sizing: border-box;
+      border-top: 1px solid #dadada;
+
+      .agree {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__txt {
+          color: #050505;
+          font-weight: 400;
+          font-size: 14px;
+          cursor: pointer;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+
+  // 접수 이용동의
+  .reception-agree {
+    padding: 35px 30px 30px;
+
+    .title {
+      color: #050505;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1em;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    &-cont {
+      margin-top: 33px;
+      border: 1px solid #dadada;
+      padding: 41px 35px 27px;
+      background: #f2f2f3;
+    }
+
+    .tbl-caption {
+      margin-bottom: 20px;
+      color: #394048;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1em;
+      letter-spacing: -0.45px;
+      text-align: center;
+    }
+
+    &-txt {
+      height: 30px;
+      padding: 0 17px;
+      color: #394048;
+      font-weight: 200;
+      font-size: 11px;
+      letter-spacing: -0.55px;
+      background: #E7E7E9;
+      border: 1px solid #dadada;
+      border-top: 0;
+    }
+  }
+
+  // 접수 완료
+  .reception-done {
+    padding: 160px 0 120px;
+
+    .title {
+      position: relative;
+      padding-top: 194px;
+      color: $themeColor03;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1em;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 164px;
+        height: 164px;
+        background: url($imgModal + 'modal-sprites-form-apply.png') -75px 0/239px no-repeat;
+        transform: translateX(-50%);
+      }
+
+      .italic {
+        font-size: 1em;
+        color: $themeColor03;
+      }
+    }
+
+    .sub-title {
+      margin-top: 20px;
+      color: #394048;
+      font-size: 20px;
+      line-height: 1em;
+    }
+
+    .guide-txt {
+      color: #394048;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+
+  .chipList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px -4px 0;
+
+    &__item {
+      margin: 4px;
+    }
+  }
+
+  .modal-hospital {
+    padding: 48px 40px 45px;
+
+    .hospital-name {
+      color: #050505;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1em;
+      text-align: center;
+    }
+
+    .hospital-map{
+      width: 360px;
+      height: 600px;
+
+      * {
+        box-sizing: content-box;
+      }
+
+      .info-window {
+        width: 150px;
+        height: 20px;
+        font-size: 12px;
+      }
+    }
+
+    .hospital-summary {
+      width: 427px;
+    }
+
+    .summary-row {
+      padding: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .chip-pc + .summary-row {
+      border-top: 0;
+    }
+
+    .hospital-addr {
+      color: #050505;
+      font-size: 16px;
+      line-height: 1em;
+    }
+
+    .hospital-p-num {
+      margin-top: 15px;
+      color: #394048;
+      font-size: 16px;
+      line-height: 1em;
+    }
+
+    .hospital-nearby-station {
+      margin-top: 17px;
+      color: #394048;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 1em;
+    }
+
+    .hospital-c-date {
+      color: #394048;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 1em;
+    }
+
+    .doctor-total {
+      margin-bottom: 15px;
+      color: #394048;
+      font-size: 16px;
+      line-height: 1em;
+    }
+
+    .doctor-type {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .doctor-specialist {
+      position: relative;
+      padding-left: 20px;
+      color: #7a899a;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 22px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: #7a899a;
+      }
+    }
+
+    .chip-pc {
+      margin-left: 20px;
+      padding: 8px 10px;
+      font-size: 16px;
+    }
+  }
+}

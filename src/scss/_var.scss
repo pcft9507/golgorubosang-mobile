@@ -1,0 +1,66 @@
+$img: '../images/';
+$imgMain: $img + 'main/';
+$imgCommon: $img + 'common/';
+$imgModal: $img + 'modal/';
+$imgArrow: $img + 'arrow/';
+$imgAbout: $img + 'about/';
+$imgBanner: $img + 'banner/';
+$imgSample: $img + 'sample/';
+$imgVisual: $img + 'visual/';
+$imgCs: $img + 'cs/';
+
+$guideW: 1200px;
+$minW: 1200px;
+
+$themeColor01: #32a9fd;
+$themeColor02: #00c268;
+$themeColor03: #105de1;
+$themeColor04: #013ca0;
+$themeError: #f70f66;
+$themeSuccess: #00c268;
+
+$radio-color: #00005c; 
+
+// margin and paddings in separate directions i.e: mt-1 = margin-top: 1px; pb-1 = padding-bottom: 1px;
+@each $abbr, $name in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left') {
+  @each $prop, $prop-name in ('m': 'margin', 'p': 'padding') {
+    @for $i from 0 through 100 {
+      .#{$prop}#{$abbr}-#{$i} {
+        #{$prop-name}-#{$name}: 1px * $i;
+      }
+    }
+  }
+}
+
+// 폰트 사이즈
+@for $i from 1 through 100 {
+  .fs-#{$i} {
+    font-size: 1px * $i;
+  }
+}
+
+// 넓이 사이즈
+@for $i from 1 through 10000 {
+  .w-px-#{$i} {
+    width: 1px * $i !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  .w-pc-#{$i} {
+    width: 1% * $i;
+  }
+}
+
+// 높이 사이즈
+@for $i from 1 through 10000 {
+  .h-px-#{$i} {
+    height: 1px * $i;
+  }
+}
+
+@for $i from 1 through 100 {
+  .h-pc-#{$i} {
+    height: 1% * $i;
+  }
+}

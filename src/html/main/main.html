@@ -1,0 +1,147 @@
+@@include('@@webRoot/include/head.html')
+
+<body>
+  <div class="wrap">
+    <div class="l-container-main main">
+      <div class="main-visual">
+        <div class="visual-slogan">
+          <h2 class="main-visual-tit">보/험/과/보/상/은/다/릅/니/다</h2>
+          <p class="main-visual-txt1">당신의 든든한 지원자</p>
+          <p class="main-visual-txt2">골고루보상</p>
+        </div>
+        <div class="swiper mainVisualSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="@@webRoot/assets/images/visual/main-visual.jpg"></div>
+            <div class="swiper-slide"><img src="@@webRoot/assets/images/visual/main-visual.jpg"></div>
+            <div class="swiper-slide"><img src="@@webRoot/assets/images/visual/main-visual.jpg"></div>
+          </div>
+        </div>   
+        <div class="visual-bottom">
+          <ul class="bottom-list">
+            <li class="list-item">
+              <h3 class="ctgr-tit">상담 만족도</h3>
+              <p class="item-txt"><strong class="strong">94.5</strong>%</p>
+            </li>
+            <li class="list-item">
+              <h3 class="ctgr-tit">서비스 만족도</h3>
+              <p class="item-txt"><strong class="strong">92.6</strong>%</p>
+            </li>
+            <li class="list-item">
+              <h3 class="ctgr-tit">매칭 요청 건수</h3>
+              <p class="item-txt"><strong class="strong">2,977</strong>건</p>
+            </li>
+            <li class="list-item">
+              <h3 class="ctgr-tit">전국 제휴 손해사정사</h3>
+              <p class="item-txt"><strong class="strong">118</strong>명</p>
+            </li>
+          </ul>
+          <p class="bottom-txt1">가입하는 순간은 쉽고, 보상받는 상황은 너무 어렵지 않으신가요?</p>
+          <p class="bottom-txt2">
+            가족의 행복과 건강을 위해 골고루보상이 함께 노력합니다.<br>
+            독립손해사정사를 통해 행복한 당신의 든든한 지원자가 되겠습니다.<br>
+            제대로 보상받는 그 날까지 항상 당신과 함께합니다.
+          </p>
+          <a href="@@webRoot/matching/matching.html" class="visual-btn btn btn-radius theme02">무료 상담 받기</a>
+        </div>      
+      </div>
+    </div>
+
+    <hr>
+
+    @@include('@@webRoot/include/footer.html')
+  </div>
+
+<script src="@@webRoot/assets/js/swiper.min.js"></script>
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'home'
+
+  // 비주얼 슬라이드
+  var swiper = new Swiper(".mainVisualSwiper", {
+    spaceBetween: 0,
+    loop: true,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // }
+  });
+
+  // 숫자 천단위 콤마
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  }
+
+  $('.mainSimpleBan__cntNum').each(function () {
+    // console.log($(this));
+    // prop(), Counter라는 속성을 생성한 뒤 0으로 초기화 한다.
+    $(this)
+      .prop('Counter', 0)
+      // animate(), 각각의 text를 받아와 Counter에 넣어 애니메이트한다.
+      .animate(
+        {
+          Counter: $(this).text(),
+        },
+        // 부드러운 애니메이션을 만들기 위해 속성을 지정한다.
+        {
+          duration: 2000,
+          easing: 'swing',
+          // step(), 애니메이션 과정을 받아온다.
+          step : function (now) {
+            if ($(this).hasClass('cs') || $(this).hasClass('sv')) {
+              $(this).text(numberWithCommas(now.toFixed(1)));
+            } else {
+              $(this).text(numberWithCommas(Math.floor(now)));
+            }
+          },
+        }
+    );
+  });
+
+  // 푸터 배너
+  var swiper = new Swiper(".footerMain__swiper", {
+    slidesPerView: 6,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".footerMain__next",
+      prevEl: ".footerMain__prev",
+    },
+  });
+
+  // 이벤트
+  var swiper = new Swiper(".event-swiper", {
+    spaceBetween: 30,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    loop: true,
+    pagination: {
+      el: ".eventSwiper-page",
+      clickable: true
+    },
+  });  
+
+  // 골고루 티비
+  var swiper = new Swiper(".vod-swiper", {
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
+    loop: true,
+    navigation: {
+      nextEl: ".vod-move.next",
+      prevEl: ".vod-move.prev",
+    },
+    pagination: {
+      el: ".vod-pagenation",
+      clickable: true
+    },
+  });  
+</script>
+</body>
+</html>

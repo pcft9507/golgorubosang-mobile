@@ -1,0 +1,23 @@
+// 버튼 색상
+.btn {
+  padding: 5px;
+  color: #fff;
+
+  &.theme01{
+    background: $themeColor01;
+  }
+  &.theme02{
+    background: $themeColor02;
+  }
+  &.theme03{
+    background: $themeColor03;
+  }
+  &.theme04{
+    background: $themeColor04;
+  }
+}
+
+.btn-radius {
+  height: var(--height);
+  border-radius: calc(var(--height)/2);
+}
