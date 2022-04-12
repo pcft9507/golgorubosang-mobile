@@ -126,9 +126,8 @@
   width: 100%;
   height: 56px;
   border-top: 1px solid #E9EAEE;
-  background: #fff;
-  mix-blend-mode: multiply;
-
+  background: rgba(255, 255, 255, 0.95);
+  
   &__item {
     display: flex;
     justify-content: center;

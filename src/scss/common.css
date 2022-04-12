@@ -79,6 +79,12 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+.wrap {
+  position: relative;
+  max-width: 767px;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
 }
