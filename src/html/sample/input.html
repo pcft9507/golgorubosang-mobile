@@ -1,0 +1,41 @@
+@@include('@@webRoot/include/head.html')
+
+<style>
+  .sample-wrap {padding: 50px; background: #F8F9FA;}
+  .sample-tit {font-size: 30px;}
+  .sample-tit02 {margin: 20px 0 10px; font-size: 20px;}
+  .space {margin: 50px 0;}
+  .btn-radius {--height: 40px;}
+  @media screen and (max-width: 767px) {
+    .sample-wrap {padding: 15px;}
+  }
+</style>
+<div class="sample-wrap">
+  <h1 class="sample-tit">입력요소</h1>
+
+  <h2 class="sample-tit02">라디오</h2>
+
+  <div class="radioRow">
+    <div class="radio">
+      <input type="radio" id="area-radio1" name="radio1" class="radio__inp">
+      <label for="area-radio1" class="radio__label">서울</label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="area-radio2" name="radio1" class="radio__inp">
+      <label for="area-radio2" class="radio__label">경기</label>
+    </div>
+  </div>
+
+  <h2 class="sample-tit02">체크박스</h2>
+
+  <div class="radioRow">
+    <div class="radio">
+      <input type="checkbox" id="area-checkbox1" name="checkbox1" class="radio__inp">
+      <label for="area-checkbox1" class="radio__label">서울</label>
+    </div>
+    <div class="radio">
+      <input type="checkbox" id="area-checkbox2" name="checkbox1" class="radio__inp">
+      <label for="area-checkbox2" class="radio__label">경기</label>
+    </div>
+  </div>
+</div>

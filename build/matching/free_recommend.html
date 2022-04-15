@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">무료 추천</h1>
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub bg-gray">
+      <div class="free-r step-one">
+        <div class="cont-head">
+          <h2 class="cont-head-tit">고민은 보상을 늦출 뿐</h2>
+          <p class="cont-head-txt1">내 보험금 제대로 보상받자</p>
+          <p class="cont-head-txt2">오직 '고객을 위한' 무료추천 상담</p>
+        </div>
+        <div class="l-row-inner">
+          <div class="radio-select-box">
+            <h3 class="box-tit">01. 상담 지역을 선택해주세요 (복수선택가능)</h3>
+            <ul class="radioList grid4">
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area1" name="areaSlect" class="radio__inp">
+                  <label for="area1" class="radio__label">서울</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area2" name="areaSlect" class="radio__inp">
+                  <label for="area2" class="radio__label">경기</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area3" name="areaSlect" class="radio__inp">
+                  <label for="area3" class="radio__label">부산</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area4" name="areaSlect" class="radio__inp">
+                  <label for="area4" class="radio__label">대구</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area5" name="areaSlect" class="radio__inp">
+                  <label for="area5" class="radio__label">인천</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area6" name="areaSlect" class="radio__inp">
+                  <label for="area6" class="radio__label">광주</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area7" name="areaSlect" class="radio__inp">
+                  <label for="area7" class="radio__label">대전</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area8" name="areaSlect" class="radio__inp">
+                  <label for="area8" class="radio__label">울산</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area9" name="areaSlect" class="radio__inp">
+                  <label for="area9" class="radio__label">세종</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area10" name="areaSlect" class="radio__inp">
+                  <label for="area10" class="radio__label">강원</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area11" name="areaSlect" class="radio__inp">
+                  <label for="area11" class="radio__label">전북</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area12" name="areaSlect" class="radio__inp">
+                  <label for="area12" class="radio__label">전남</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area13" name="areaSlect" class="radio__inp">
+                  <label for="area13" class="radio__label">충북</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area14" name="areaSlect" class="radio__inp">
+                  <label for="area14" class="radio__label">충남</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area15" name="areaSlect" class="radio__inp">
+                  <label for="area15" class="radio__label">경북</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area16" name="areaSlect" class="radio__inp">
+                  <label for="area16" class="radio__label">경남</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="area17" name="areaSlect" class="radio__inp">
+                  <label for="area17" class="radio__label">제주</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="free-r-txt">골고루보상은 고객님의 버팀목이 되어 드리겠습니다.</p>
+          <div class="btn-wrap">
+            <button class="btn btn-radius w-pc-100 theme03"  onclick="nextStep ()">다음</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="free-r step-two">
+        <div class="l-container-inner">
+          <div class="radio-select-box">
+            <h3 class="box-tit">02. 상담 분야를 선택해주세요 (복수선택가능)</h3>
+            <ul class="radioList2 grid2">
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField1" name="cField" class="radio__inp">
+                  <label for="cField1" class="radio__label">실손</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField2" name="cField" class="radio__inp">
+                  <label for="cField2" class="radio__label">질병</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField3" name="cField" class="radio__inp">
+                  <label for="cField3" class="radio__label">상해</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField4" name="cField" class="radio__inp">
+                  <label for="cField4" class="radio__label">어린이</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField5" name="cField" class="radio__inp">
+                  <label for="cField5" class="radio__label">태아</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField6" name="cField" class="radio__inp">
+                  <label for="cField6" class="radio__label">차량파손(대물)</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField7" name="cField" class="radio__inp">
+                  <label for="cField7" class="radio__label">교통사고(대인)</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField8" name="cField" class="radio__inp">
+                  <label for="cField8" class="radio__label">배상책임</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField9" name="cField" class="radio__inp">
+                  <label for="cField9" class="radio__label">근로재해</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField10" name="cField" class="radio__inp">
+                  <label for="cField10" class="radio__label">학교안전사고</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField11" name="cField" class="radio__inp">
+                  <label for="cField11" class="radio__label">여행자</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField12" name="cField" class="radio__inp">
+                  <label for="cField12" class="radio__label">골프</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField13" name="cField" class="radio__inp">
+                  <label for="cField13" class="radio__label">치아</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField14" name="cField" class="radio__inp">
+                  <label for="cField14" class="radio__label">연금</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField15" name="cField" class="radio__inp">
+                  <label for="cField15" class="radio__label">도난</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField16" name="cField" class="radio__inp">
+                  <label for="cField16" class="radio__label">화재</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField17" name="cField" class="radio__inp">
+                  <label for="cField17" class="radio__label">재난</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField17" name="cField" class="radio__inp">
+                  <label for="cField17" class="radio__label">생명</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField17" name="cField" class="radio__inp">
+                  <label for="cField17" class="radio__label">침수</label>
+                </div>
+              </li>
+              <li class="radioList__item">
+                <div class="radio">
+                  <input type="checkbox" id="cField17" name="cField" class="radio__inp">
+                  <label for="cField17" class="radio__label">기타</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn btn-radius w-pc-100 theme03" onclick="apply ()">상담신청</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'recommend'
+
+  // 다음
+  function nextStep () {
+    console.log('다음')
+    $('.step-one').hide()
+    $('.step-two').show()
+  }
+
+  // 상담신청
+  function apply () {
+    console.log('상담신청')
+  }
+</script>
+</body>
+</html>

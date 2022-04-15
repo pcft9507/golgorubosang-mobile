@@ -1,24 +1,38 @@
 @@include('@@webRoot/include/head.html')
 
 <style>
+  .sample-wrap {padding: 50px; background: #F8F9FA;}
   .sample-tit {font-size: 30px;}
   .sample-tit02 {margin: 20px 0 10px; font-size: 20px;}
   .space {margin: 50px 0;}
   .btn-radius {--height: 40px;}
+  @media screen and (max-width: 767px) {
+    .sample-wrap {padding: 15px;}
+  }
 </style>
-<div class="sample-wrap" style="padding: 50px; background-color: #F8F9FA;">
+<div class="sample-wrap">
   <h1 class="sample-tit">버튼</h1>
 
   <h2 class="sample-tit02">기본형</h2>
 
-  <button class="btn theme01">무료 상담 받기</button>
-  <button class="btn theme02">무료 상담 받기</button>
-  <button class="btn theme03">무료 상담 받기</button>
-  <button class="btn theme04">무료 상담 받기</button>
+  <div class="btn-wrap">
+    <button class="btn theme01">무료 상담 받기</button>
+    <button class="btn theme02">무료 상담 받기</button>
+    <button class="btn theme03">무료 상담 받기</button>
+    <button class="btn theme04">무료 상담 받기</button>
+  </div>
 
   <h2 class="sample-tit02">기본형 + border-radius</h2>
 
-  <button class="btn btn-radius theme01">무료 상담 받기</button>
-  <button class="btn btn-radius theme02">무료 상담 받기</button>
-  <button class="btn btn-radius theme03">무료 상담 받기</button>
-  <button class="btn btn-radius theme04">무료 상담 받기</button>
+  <div class="btn-wrap">
+    <button class="btn btn-radius theme01">무료 상담 받기</button>
+    <button class="btn btn-radius theme02">무료 상담 받기</button>
+    <button class="btn btn-radius theme03">무료 상담 받기</button>
+    <button class="btn btn-radius theme04">무료 상담 받기</button>
+  </div>
+
+  <h2 class="sample-tit02">기본형 + 풀사이즈</h2>
+
+  <div class="btn-wrap">
+    <button class="btn btn-radius w-pc-100 theme03">무료 상담 받기</button>
+  </div>

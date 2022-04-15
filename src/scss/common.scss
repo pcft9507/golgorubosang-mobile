@@ -12,6 +12,8 @@
 
 body {
   font-size: 100%;
+	line-height: 1;
+  letter-spacing: -0.05em;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -62,9 +64,6 @@ figcaption {
   overflow: hidden;
 }
 
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
