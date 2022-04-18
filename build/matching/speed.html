@@ -21,13 +21,12 @@
     <hr>
     
     <div class="l-container-sub bg-gray">
-      <div class="free-r step-one">
-        <div class="cont-head">
-          <h2 class="cont-head-tit">고민은 보상을 늦출 뿐</h2>
-          <p class="cont-head-txt1">내 보험금 제대로 보상받자</p>
-          <p class="cont-head-txt2">오직 '고객을 위한' 무료추천 상담</p>
-        </div>
+      <div class="matching-speed">
         <div class="l-row-inner">
+          <div class="matching-speed-head">
+            <p class="matching-speed-txt1">상담받고 싶은 분야와 지역을 선택해보세요!</p>
+            <p class="matching-speed-txt2">전국의 독립손해사정사가 여러분을 기다립니다.</p>
+          </div>
           <div class="radio-select-box">
             <h3 class="box-tit">01. 상담 지역을 선택해주세요 (복수선택가능)</h3>
             <ul class="radioList grid4">
@@ -135,15 +134,8 @@
               </li>
             </ul>
           </div>
-          <p class="free-r-txt">골고루보상은 고객님의 버팀목이 되어 드리겠습니다.</p>
-          <div class="btn-wrap">
-            <button class="btn btn-radius w-pc-100 theme03"  onclick="nextStep ()">다음</button>
-          </div>
         </div>
-      </div>
-
-      <div class="free-r step-two">
-        <div class="l-row-inner">
+        <div class="l-row-inner mt-16">
           <div class="radio-select-box">
             <h3 class="box-tit">02. 상담 분야를 선택해주세요 (복수선택가능)</h3>
             <ul class="radioList2 grid2">
@@ -312,19 +304,12 @@
 
 <script>
   // 타이틀
-  $('.page-title').text('무료추천')
+  $('.page-title').text('스피드검색')
 
   // 하단 메뉴 활성 변수 선언
-  var page = 'recommend'
+  var page = 'matching'
 
-  // 다음
-  function nextStep () {
-    console.log('다음')
-    $('.step-one').hide()
-    $('.step-two').show()
-  }
-
-  // 상담신청
+  // 검색하기
   function apply () {
     console.log('상담신청')
   }

@@ -1,33 +1,18 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/common.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/jquery-3.6.0.min.js"></script>
-  <script defer src="../assets/js/ui.js"></script>
-  <title>골고루 보상</title>
-</head>
-
+@@include('@@webRoot/include/head.html')
 
 <body>
   <div class="wrap">
-    <header class="l-header-sub">
-  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
-  <h1 class="page-title"></h1>
-</header>
+    @@include('@@webRoot/include/header_sub.html')
 
     <hr>
     
     <div class="l-container-sub bg-gray">
-      <div class="free-r step-one">
-        <div class="cont-head">
-          <h2 class="cont-head-tit">고민은 보상을 늦출 뿐</h2>
-          <p class="cont-head-txt1">내 보험금 제대로 보상받자</p>
-          <p class="cont-head-txt2">오직 '고객을 위한' 무료추천 상담</p>
-        </div>
+      <div class="matching-speed">
         <div class="l-row-inner">
+          <div class="matching-speed-head">
+            <p class="matching-speed-txt1">상담받고 싶은 분야와 지역을 선택해보세요!</p>
+            <p class="matching-speed-txt2">전국의 독립손해사정사가 여러분을 기다립니다.</p>
+          </div>
           <div class="radio-select-box">
             <h3 class="box-tit">01. 상담 지역을 선택해주세요 (복수선택가능)</h3>
             <ul class="radioList grid4">
@@ -135,15 +120,8 @@
               </li>
             </ul>
           </div>
-          <p class="free-r-txt">골고루보상은 고객님의 버팀목이 되어 드리겠습니다.</p>
-          <div class="btn-wrap">
-            <button class="btn btn-radius w-pc-100 theme03"  onclick="nextStep ()">다음</button>
-          </div>
         </div>
-      </div>
-
-      <div class="free-r step-two">
-        <div class="l-row-inner">
+        <div class="l-row-inner mt-16">
           <div class="radio-select-box">
             <h3 class="box-tit">02. 상담 분야를 선택해주세요 (복수선택가능)</h3>
             <ul class="radioList2 grid2">
@@ -278,53 +256,17 @@
 
     <hr>
 
-    <footer class="l-footer">
-  <ul class="quickMenu">
-    <li class="quickMenu__item">
-      <a href="#" class="quickMenu__btn">
-        <span class="quickMenu__txt home">홈</span>
-      </a>
-    </li>
-    <li class="quickMenu__item">
-      <a href="#" class="quickMenu__btn">
-        <span class="quickMenu__txt agent">독립손사</span>
-      </a>
-    </li>
-    <li class="quickMenu__item">
-      <a href="#" class="quickMenu__btn">
-        <span class="quickMenu__txt rcm">무료추천</span>
-      </a>
-    </li>
-    <li class="quickMenu__item">
-      <a href="#" class="quickMenu__btn">
-        <span class="quickMenu__txt case">보상사례</span>
-      </a>
-    </li>
-    <li class="quickMenu__item">
-      <a href="#" class="quickMenu__btn">
-        <span class="quickMenu__txt menu">더보기</span>
-      </a>
-    </li>
-  </ul>
-</footer>
-
+    @@include('@@webRoot/include/footer.html')
   </div>
 
 <script>
   // 타이틀
-  $('.page-title').text('무료추천')
+  $('.page-title').text('스피드검색')
 
   // 하단 메뉴 활성 변수 선언
-  var page = 'recommend'
+  var page = 'matching'
 
-  // 다음
-  function nextStep () {
-    console.log('다음')
-    $('.step-one').hide()
-    $('.step-two').show()
-  }
-
-  // 상담신청
+  // 검색하기
   function apply () {
     console.log('상담신청')
   }

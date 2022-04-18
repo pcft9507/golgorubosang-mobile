@@ -62,6 +62,7 @@
   
   &.step-two {
     display: none;
+    padding-top: 16px;
 
     .radio-select-box {
       padding-bottom: 0;
@@ -149,6 +150,38 @@
     padding-bottom: 0;
   }
 
+  .btn-wrap {
+    margin-top: 36px;
+
+    .btn {
+      --height: 36px;
+    }
+  }
+}
+
+.matching-speed {
+
+  .matching-speed-head {
+    padding: 24px 0;
+
+    .matching-speed-txt1 {
+      color: $themeColor03;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.72px;
+    }
+
+    .matching-speed-txt2 {
+      margin-top: 4px;
+      color: $themeColor01;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: -0.96px;
+    }
+  }
+ 
   .btn-wrap {
     margin-top: 36px;
 
