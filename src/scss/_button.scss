@@ -28,3 +28,18 @@
 .btn-wrap {
   display: flex;
 }
+
+.btnChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 24px;
+  background: #fff;
+  border-radius: 16px;
+  border: solid 1px #c0c1ca;
+  color: #111;
+  font-weight: 500;
+  font-size: 10px;
+  box-shadow: 0 1px 2px rgba(17, 17, 17, 0.2)
+}
