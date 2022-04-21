@@ -276,7 +276,7 @@
                 <input type="checkbox" id="agree" class="formInp__agreeChkBox">
                 <label for="agree" class="formInp__agreeLabel">비회원 개인정보수집 및 이용안내에 동의합니다.</label>
               </div>
-              <button class="btnChip" onclick="openModal('')">내용보기</button>
+              <button class="btnChip" onclick="openModal('reception-agree')">내용보기</button>
             </div>
 
           </div>
@@ -292,6 +292,9 @@
 
     @@include('@@webRoot/include/footer.html')
   </div>
+
+  @@include('@@webRoot/modal/reception_agree.html')
+  @@include('@@webRoot/modal/reception_done.html')
 
 <script>
   // 타이틀
@@ -524,6 +527,7 @@
   // 상담신청
   function apply () {
     console.log('상담신청')
+    openModal('reception-done')
   }
 </script>
 </body>
