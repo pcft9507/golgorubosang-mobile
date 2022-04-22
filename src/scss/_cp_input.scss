@@ -228,6 +228,13 @@
     background-color: #fff;
     border-radius: 4px;
 
+    &.attached {
+
+      .formInp__fileGuide {
+        display: none;
+      }
+    }
+
     &Top {
       display: flex;
       justify-content: space-between;
@@ -275,6 +282,22 @@
       position: absolute;
       top: -3px;
       right: 0;
+    }
+
+    &Guide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 220px;
+      border-top: 1px solid rgba(192, 193, 202, 0.6);
+
+      &Txt {
+        padding-top: 80px;
+        color: #787e85;
+        font-size: 14px;
+        line-height: 24px;
+        background: url($imgCommon + 'ico-attach-file.png') 50% 0/64px no-repeat;
+      }
     }
   }
 

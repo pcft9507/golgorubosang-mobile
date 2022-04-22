@@ -230,7 +230,15 @@
 
             <div class="formInp__row">
               <div class="formInp__col">
-                <label for="attachPic" class="formInp__label">(선택) 사진 첨부</label>
+                <!-- 필수/차량일때 -->
+                <label for="attachPic" class="formInp__label required">(필수) 사진 첨부</label>
+                <!-- 필수/차량일때 end -->
+                <!-- 선택/신체일때 -->
+                <!-- <label for="attachPic" class="formInp__label">(필수) 사진 첨부</label> -->
+                <!-- 선택/신체일때 end -->
+                <!-- 선택/재물일때 -->
+                <!-- <label for="attachPic" class="formInp__label">(필수) 사진 첨부</label> -->
+                <!-- 선택/재물일때 end -->
                 <input type="file" id="attachPic" class="formInp__attachPic" multiple="multiple">
                 <div class="formInp__file">
                   <div class="formInp__fileTop">
@@ -261,6 +269,23 @@
                       <button class="formInp__fileDel btnChip">삭제</button>
                     </li> -->
                   </ul>
+                  <div class="formInp__fileGuide">
+                    <!-- 필수/차량일때 -->
+                    <p class="formInp__fileGuideTxt">(이미지 5장까지 첨부 가능)</p>
+                    <!-- 필수/차량일때 end -->
+                    <!-- 선택/신체일때 -->
+                    <!-- <p class="formInp__fileGuideTxt">
+                      진단서 사진이 첨부될 경우 더 빠른 대응이 가능합니다.<br>
+                      (이미지 5장까지 첨부 가능)
+                    </p> -->
+                    <!-- 선택/신체일때 end -->
+                    <!-- 선택/재물일때 -->
+                    <!-- <p class="formInp__fileGuideTxt">
+                      현장사진 첨부 시에 더 빠른 대응이 가능합니다.<br>
+                      (이미지 5장까지 첨부 가능)
+                    </p> -->
+                    <!-- 선택/재물일때 end -->
+                  </div>
                 </div>
                 <button class="formInp__fileAttach btnChip js-attach-photo">파일첨부</button>
               </div>
@@ -417,6 +442,7 @@
           alert("ERROR");
         }
         $('.formInp__fileVol2').text(fileSizeStr)
+        $('.formInp__file').addClass('attached')
       }
     }
   }
@@ -472,6 +498,7 @@
     } else {
       console.log('totalFileSize zero')
       $('.formInp__fileVol2').text(0)
+      $('.formInp__file').removeClass('attached')
     }
   }
 
