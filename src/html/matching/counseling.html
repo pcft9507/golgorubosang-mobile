@@ -2,7 +2,9 @@
 
 <body>
   <div class="wrap">
-    @@include('@@webRoot/include/header_sub.html')
+    @@include('@@webRoot/include/header_sub.html', {
+      title: '상담'
+    })
 
     <hr>
     
@@ -164,9 +166,6 @@
   </div>
 
 <script>
-  // 타이틀
-  $('.page-title').text('상담')
-
   // 하단 메뉴 활성 변수 선언
   var page = 'matching'
 

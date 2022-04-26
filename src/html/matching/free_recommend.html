@@ -2,7 +2,9 @@
 
 <body>
   <div class="wrap">
-    @@include('@@webRoot/include/header_sub.html')
+    @@include('@@webRoot/include/header_sub.html', {
+      title: '무료추천'
+    })
 
     <hr>
     
@@ -268,9 +270,6 @@
   </div>
 
 <script>
-  // 타이틀
-  $('.page-title').text('무료추천')
-
   // 하단 메뉴 활성 변수 선언
   var page = 'recommend'
 

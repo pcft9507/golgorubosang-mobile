@@ -250,6 +250,7 @@
       .title {
         margin-right: 8px;
         color: #787E85;
+        font-weight: 400;
         font-size: 12px;
         letter-spacing: -0.24px;
       }
@@ -325,11 +326,11 @@
 
     .power-agent {
       margin: 16px -16px 0;
-      padding-left: 16px;
+      padding: 0 16px;
 
       .swiper-slide {
         position: relative;
-        width: 104px;
+        width: 96px;
         overflow: hidden;
         border-radius: 8px;
         font-size: 0;

@@ -299,3 +299,35 @@
     background: #fff;
   }
 }
+
+.schKey {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 8px 0;
+
+  &__inp {
+    --height: 32px;
+    width: calc(100% - 40px);
+    height: var(--height);
+    padding: 0 16px;
+    color: #050505;
+    font-weight: 300;
+    font-size: 12px;
+    background: #f9f9fa;
+    border: 1px solid #e9eaee;
+    border-radius: calc(var(--height)/2);
+
+    &::placeholder {
+      color: #787e85;
+      font-size: 10px;
+    }
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    background: url($imgSub + 'bg-matching.png') -216px -90px/306px no-repeat;
+  }
+}

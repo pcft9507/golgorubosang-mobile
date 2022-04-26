@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">독립손사</h1>
+  <button class="goKakao">카카오톡 상담하기</button>
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <div class="matching">
+        <!-- matching-search -->
+        <div class="matching-search">
+          <div class="schKey">
+            <input type="search" class="schKey__inp" placeholder="독립손사 이름, 지역, 분야 등 키워드를 검색해 보세요">
+            <button class="schKey__btn" title="검색하기"><span class="is-blind">검색하기</span></button>
+          </div>
+
+          <div class="searched-key">
+            <span class="key-title">검색어</span>
+            <div class="key-wrap">
+              <ul class="key-list">
+                <li class="key-item">
+                  <span class="searched-chip has-del">
+                    무료상담
+                    <button class="" onclick="delKw(this)" title="키워드 삭제"></button>
+                  </span>
+                </li>
+                <li class="key-item">
+                  <span class="searched-chip has-del">
+                    배상책임
+                    <button class="" onclick="delKw(this)" title="키워드 삭제"></button>
+                  </span>
+                </li>
+                <li class="key-item">
+                  <span class="searched-chip has-del">
+                    무료상담
+                    <button class="" onclick="delKw(this)" title="키워드 삭제"></button>
+                  </span>
+                </li>
+                <li class="key-item">
+                  <span class="searched-chip has-del">
+                    배상책임
+                    <button class="" onclick="delKw(this)" title="키워드 삭제"></button>
+                  </span>
+                </li>
+                <li class="key-item">
+                  <span class="searched-chip has-del">
+                    무료상담
+                    <button class="" onclick="delKw(this)" title="키워드 삭제"></button>
+                  </span>
+                </li>
+                <li class="key-item">
+                  <span class="searched-chip has-del">
+                    배상책임
+                    <button class="" onclick="delKw(this)" title="키워드 삭제"></button>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- matching-search end -->
+        <!-- matching-top -->
+        <div class="matching-top">
+          <div class="hot-kw">
+            <h3 class="title">인기 검색어</h3>
+            <div class="swiper hot-kw-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">무표상담</div>
+                <div class="swiper-slide">교통사고</div>
+                <div class="swiper-slide">후유장애 보험금</div>
+                <div class="swiper-slide">암진단</div>
+                <div class="swiper-slide">무표상담</div>
+                <div class="swiper-slide">교통사고</div>
+                <div class="swiper-slide">후유장애 보험금</div>
+                <div class="swiper-slide">암진단</div>
+              </div>
+            </div>   
+          </div>
+        </div>
+        <!-- matching-top end -->
+        <!-- matching-find -->
+        <div class="matching-find">
+          <div class="l-row-inner">
+            <h2 class="matching-find-tit">나만의 독립손해사정사 찾기</h2>
+            <p class="matching-find-txt">처음부터 끝까지 고객님과 함께합니다.</p>
+            <div class="matching-find-ban d-flex-s-s">
+              <div class="ban-speed">
+                <h3 class="ban-speed-tit">스피드 검색</h3>
+                <p class="ban-speed-txt">
+                  상담받고 싶은 분야와 지역을 선택해주세요!<br>
+                  전국의 독립손사가 여러분을 기다립니다.
+                </p>
+              </div>
+              <div class="ban-free">
+                <h3 class="ban-free-tit">무료 추천<br>받기</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- matching-find end -->
+
+        <!-- matching-list-wrap -->
+        <div class="matching-list-wrap">
+          <ul class="matching-list">
+            <li class="matching-item">
+              <div class="summaryCard">
+                <div class="summaryCard__imgName">
+                  <figure class="summaryCard__imgWrap">
+                    <figcaption>손해사정사 사진</figcaption>
+                    <img src="../assets/images/sample/sample-agent.jpg" class="summaryCard__img">
+                  </figure>
+                  <div class="summaryCard__nameWrap">
+                    <span class="summaryCard__name">홍길동</span>
+                  </div>
+                </div>
+                <div class="summaryCard__info">
+                  <div class="summaryCard__badge">
+                    <span class="chip-ctg">후유장애</span>
+                    <span class="chip-ctg">배상책임</span>
+                    <span class="chip-ctg">교통사고</span>
+                  </div>
+                  <ul class="summaryCard__list">
+                    <li class="summaryCard__item">활동지역 : 서울, 경기, 인천</li>
+                    <li class="summaryCard__item">자격 : 종합 손해보험사</li>
+                    <li class="summaryCard__item">분야: 실손, 질병, 배상책임, 생명, 교통사고, 화재배상책임보험</li>
+                  </ul>
+                  <div class="summaryCard__btnWrap">
+                    <a href="matching_detail.html" class="summaryCard__btn">상세보기</a>
+                    <a href="counseling.html" class="summaryCard__btn">상담하기</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="matching-item">
+              <div class="summaryCard">
+                <div class="summaryCard__imgName">
+                  <figure class="summaryCard__imgWrap">
+                    <figcaption>손해사정사 사진</figcaption>
+                    <img src="../assets/images/sample/sample-agent.jpg" class="summaryCard__img">
+                  </figure>
+                  <div class="summaryCard__nameWrap">
+                    <span class="summaryCard__name">홍길동</span>
+                  </div>
+                </div>
+                <div class="summaryCard__info">
+                  <div class="summaryCard__badge">
+                    <span class="chip-ctg">후유장애</span>
+                    <span class="chip-ctg">배상책임</span>
+                    <span class="chip-ctg">교통사고</span>
+                  </div>
+                  <ul class="summaryCard__list">
+                    <li class="summaryCard__item">활동지역 : 서울, 경기, 인천</li>
+                    <li class="summaryCard__item">자격 : 종합 손해보험사</li>
+                    <li class="summaryCard__item">분야: 실손, 질병, 배상책임, 생명, 교통사고, 화재배상책임보험</li>
+                  </ul>
+                  <div class="summaryCard__btnWrap">
+                    <a href="matching_detail.html" class="summaryCard__btn">상세보기</a>
+                    <a href="counseling.html" class="summaryCard__btn">상담하기</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="matching-item">
+              <div class="summaryCard">
+                <div class="summaryCard__imgName">
+                  <figure class="summaryCard__imgWrap">
+                    <figcaption>손해사정사 사진</figcaption>
+                    <img src="../assets/images/sample/sample-agent.jpg" class="summaryCard__img">
+                  </figure>
+                  <div class="summaryCard__nameWrap">
+                    <span class="summaryCard__name">홍길동</span>
+                  </div>
+                </div>
+                <div class="summaryCard__info">
+                  <div class="summaryCard__badge">
+                    <span class="chip-ctg">후유장애</span>
+                    <span class="chip-ctg">배상책임</span>
+                    <span class="chip-ctg">교통사고</span>
+                  </div>
+                  <ul class="summaryCard__list">
+                    <li class="summaryCard__item">활동지역 : 서울, 경기, 인천</li>
+                    <li class="summaryCard__item">자격 : 종합 손해보험사</li>
+                    <li class="summaryCard__item">분야: 실손, 질병, 배상책임, 생명, 교통사고, 화재배상책임보험</li>
+                  </ul>
+                  <div class="summaryCard__btnWrap">
+                    <a href="matching_detail.html" class="summaryCard__btn">상세보기</a>
+                    <a href="counseling.html" class="summaryCard__btn">상담하기</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="matching-item">
+              <div class="summaryCard">
+                <div class="summaryCard__imgName">
+                  <figure class="summaryCard__imgWrap">
+                    <figcaption>손해사정사 사진</figcaption>
+                    <img src="../assets/images/sample/sample-agent.jpg" class="summaryCard__img">
+                  </figure>
+                  <div class="summaryCard__nameWrap">
+                    <span class="summaryCard__name">홍길동</span>
+                  </div>
+                </div>
+                <div class="summaryCard__info">
+                  <div class="summaryCard__badge">
+                    <span class="chip-ctg">후유장애</span>
+                    <span class="chip-ctg">배상책임</span>
+                    <span class="chip-ctg">교통사고</span>
+                  </div>
+                  <ul class="summaryCard__list">
+                    <li class="summaryCard__item">활동지역 : 서울, 경기, 인천</li>
+                    <li class="summaryCard__item">자격 : 종합 손해보험사</li>
+                    <li class="summaryCard__item">분야: 실손, 질병, 배상책임, 생명, 교통사고, 화재배상책임보험</li>
+                  </ul>
+                  <div class="summaryCard__btnWrap">
+                    <a href="matching_detail.html" class="summaryCard__btn">상세보기</a>
+                    <a href="counseling.html" class="summaryCard__btn">상담하기</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="matching-item">
+              <div class="summaryCard">
+                <div class="summaryCard__imgName">
+                  <figure class="summaryCard__imgWrap">
+                    <figcaption>손해사정사 사진</figcaption>
+                    <img src="../assets/images/sample/sample-agent.jpg" class="summaryCard__img">
+                  </figure>
+                  <div class="summaryCard__nameWrap">
+                    <span class="summaryCard__name">홍길동</span>
+                  </div>
+                </div>
+                <div class="summaryCard__info">
+                  <div class="summaryCard__badge">
+                    <span class="chip-ctg">후유장애</span>
+                    <span class="chip-ctg">배상책임</span>
+                    <span class="chip-ctg">교통사고</span>
+                  </div>
+                  <ul class="summaryCard__list">
+                    <li class="summaryCard__item">활동지역 : 서울, 경기, 인천</li>
+                    <li class="summaryCard__item">자격 : 종합 손해보험사</li>
+                    <li class="summaryCard__item">분야: 실손, 질병, 배상책임, 생명, 교통사고, 화재배상책임보험</li>
+                  </ul>
+                  <div class="summaryCard__btnWrap">
+                    <a href="matching_detail.html" class="summaryCard__btn">상세보기</a>
+                    <a href="counseling.html" class="summaryCard__btn">상담하기</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- matching-list-wrap end -->
+      </div>
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+<script src="../assets/js/swiper.min.js"></script>
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'matching'
+
+  // 검색어 스와이프
+  var hotKwSwiper = new Swiper(".hot-kw-swiper", {
+    slidesPerView: 'auto',
+    spaceBetween: 6,
+  });
+</script>
+</body>
+</html>
