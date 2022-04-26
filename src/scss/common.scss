@@ -10,7 +10,12 @@
   font-style: normal;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   font-size: 100%;
 	line-height: 1;
   letter-spacing: -0.05em;
@@ -24,6 +29,8 @@ footer, header, hgroup, menu, nav, section {
 .wrap {
   position: relative;
   max-width: 767px;
+  height: 100%;
+  overflow: hidden;
   margin: 0 auto;
 }
 

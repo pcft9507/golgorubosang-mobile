@@ -120,6 +120,40 @@
   }
 }
 
+.chipCtg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 12px;
+  background: $themeColor02;
+  border-radius: 4px;
+
+  & + .chipCtg {
+    margin-left: 4px;
+  }
+}
+
+.searchedChip {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 2px 0 8px;
+  color: #fff;
+  font-size: 10px;
+  background: #787e85;
+  border-radius: 12px;
+
+  .searchedChip__del {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    background: url($imgCommon + 'ico-searched-del.png') 0 0/100%;
+  }
+}
+
 .quickMenu {
   display: flex;
   justify-content: space-between;
@@ -328,6 +362,86 @@
   &__btn {
     width: 32px;
     height: 32px;
-    background: url($imgSub + 'bg-matching.png') -216px -90px/306px no-repeat;
+    background: url($imgSub + 'bg-matching.png') 0 100%/90px no-repeat;
+  }
+}
+
+.summaryCard {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e9eaee;
+  box-shadow: 0 2px 4px 0 rgba(17, 17, 17, 0.2);
+  border-radius: 8px;
+
+  &__imgName {
+    position: relative;
+    width: 96px;
+    height: 140px;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    background: rgba(27, 36, 50, 0.7);
+
+    &2 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-align: center;
+      text-indent: 0.2em;
+    }
+  }
+
+  &__cont {
+    width: calc(100% - 96px);
+  }
+
+  &__info {
+    height: 102px;
+    padding: 16px 16px 0;
+  }
+
+  &__list {
+    margin-top: 8px;
+  }
+
+  &__item {
+    color: #394048;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__btnWrap {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 38px;
+    color: #111;
+    font-weight: 500;
+    font-size: 14px;
+    border-top: 1px solid #e9eaee;
+
+    & + .summaryCard__btn {
+      border-left: 1px solid #e9eaee;
+    }
   }
 }
