@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">독립손사</h1>
+  <button class="goKakao">카카오톡 상담하기</button>
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <div class="matching">
+        <!-- matching-search -->
+        <div class="matching-search">
+          <div class="schKey">
+            <div class="schKey__inp">
+              <input type="text" class="schKey__inpTxt" placeholder="독립손사 이름, 지역, 분야 등 키워드를 검색해 보세요">
+              <button class="schKey__del" title="삭제"></button>
+            </div>
+            <button class="schKey__btn" title="검색하기"><span class="is-blind">검색하기</span></button>
+          </div>
+        </div>
+        <!-- matching-search end -->
+
+        <!-- matching-content -->
+        <div class="matching-content">
+          <div class="matching-no-data">
+            <p class="no-data-txt1">" 키워드를 다시 입력해주세요 "</p>
+            <p class="no-data-txt2">손해사정사 이름, 이력, 해시태그, 지역, 분야, 자기소개 관련<br>키워드로 검색하시면 더 편리합니다.</p>
+            <p class="no-data-txt3">예) 교통사고, 홍길동, 신체 등</p>
+          </div>
+        </div>
+        <!-- matching-content -->
+      </div>
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+<script src="../assets/js/swiper.min.js"></script>
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'matching'
+
+  // 검색어 스와이프
+  var hotKwSwiper = new Swiper(".hot-kw-swiper", {
+    slidesPerView: 'auto',
+    spaceBetween: 6,
+  });
+
+// 손해사 매칭 키워드 검색
+$('.schKey').matchingSch()
+</script>
+</body>
+</html>

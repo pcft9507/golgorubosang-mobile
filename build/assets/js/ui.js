@@ -82,9 +82,9 @@ $.fn.formInpTxt = function () {
 // 손해사 매칭 키워드 검색
 $.fn.matchingSch = function () {
   var schBody = this
-  var inpTxt = schBody.find('.matchingSch__inpTxt')
-  var inpDel = schBody.find('.js-del')
-  var submit = schBody.find('.matchingSch__submit')
+  var inpTxt = schBody.find('.schKey__inpTxt')
+  var inpDel = schBody.find('.schKey__del')
+  var submit = schBody.find('.schKey__btn')
   inpTxt.on('focus', function () {
     schBody.addClass('focus')
   })
@@ -108,48 +108,6 @@ $.fn.matchingSch = function () {
   })
 }
 
-// 드롭메뉴
-$.fn.dropMenu = function () {
-  var dropBody = Array
-  return this.each(function (i) {
-    dropBody[i] = $(this)
-    var openBtn = dropBody[i].find('.js-open')
-    var selectedTxt = dropBody[i].find('.dropMenu__txt')
-    var dropList = dropBody[i].find('.dropMenu__list')
-    var selBtn = dropBody[i].find('.js-select')
-    openBtn.on('click', function (e) {
-      e.preventDefault()
-      dropList.slideDown('fast')
-      // 손해사 매칭 검색 드롭메뉴일 경우
-      if (dropBody[i].hasClass('matching-ctr')) {
-        dropBody[i].parent().addClass('matchingSch--drop-menu')
-      }
-    })
-    openBtn.blur(function () {
-      setTimeout(function () {
-        dropList.slideUp('fast')
-        // 손해사 매칭 검색 드롭메뉴일 경우
-        if (dropBody[i].hasClass('matching-ctr')) {
-          dropBody[i].parent().removeClass('matchingSch--drop-menu')
-        }
-      }, 100)
-    })
-    selBtn.on('click', function (e) {
-      e.preventDefault()
-      selBtn.removeClass('selected')
-      $(this).addClass('selected')
-      var text = $(this).children().text()
-      selectedTxt.text(text)
-      dropList.slideUp('fast')
-      dropBody[i].attr('data-value', text)
-      // 손해사 매칭 검색 드롭메뉴일 경우
-      if (dropBody[i].hasClass('matching-ctr')) {
-        dropBody[i].parent().removeClass('matchingSch--drop-menu')
-      }
-    })
-  })
-}
-
 // 텍스트 클립보드 복사
 function copyText(element){
   var content = $(element).text()
@@ -161,23 +119,6 @@ function copyText(element){
     console.log('복사실패', err);
   })
   alert('복사되었습니다.')
-}
-
-// 게시판 리스트 
-$.fn.boardList = function () {
-  var listBody = []
-  return this.each(function (i) {
-    listBody[i] = $(this)
-    var btnOpen = listBody[i].find('.js-board-open')
-    var btnClose = listBody[i].find('.js-board-close')
-    btnOpen.on('click', function () {
-      $(this).parent().addClass('open')
-    })
-    btnClose.on('click', function (e) {
-      e.stopPropagation();
-      $(this).parents('.boardList__row').removeClass('open')
-    })
-  })
 }
 
 // 카카오지도 1.요소, 2.도로명주소, 3.마커위에 인포윈도우
@@ -215,7 +156,7 @@ function createMap (mapEl, addr, infoWindow) {
       });
       // 인포윈도우로 장소에 대한 설명을 표시합니다 (필요한 경우에만)
       var infowindow = new kakao.maps.InfoWindow({
-          content: '<div class="info-window d-flex-c-c">' + infoName + ' </div>'
+          content: '<div class="info-window d-flex-c-c">' + infoName + ' 손해사정사</div>'
       });
       infowindow.open(map, marker);
       // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다

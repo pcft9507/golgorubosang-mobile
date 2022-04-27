@@ -1,0 +1,56 @@
+@@include('@@webRoot/include/head.html')
+<body>
+  <div class="wrap">
+    @@include('@@webRoot/include/header_sub2.html', {
+      title: '독립손사'
+    })
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <div class="matching">
+        <!-- matching-search -->
+        <div class="matching-search">
+          <div class="schKey">
+            <div class="schKey__inp">
+              <input type="text" class="schKey__inpTxt" placeholder="독립손사 이름, 지역, 분야 등 키워드를 검색해 보세요">
+              <button class="schKey__del" title="삭제"></button>
+            </div>
+            <button class="schKey__btn" title="검색하기"><span class="is-blind">검색하기</span></button>
+          </div>
+        </div>
+        <!-- matching-search end -->
+
+        <!-- matching-content -->
+        <div class="matching-content">
+          <div class="matching-no-data">
+            <p class="no-data-txt1">" 키워드를 다시 입력해주세요 "</p>
+            <p class="no-data-txt2">손해사정사 이름, 이력, 해시태그, 지역, 분야, 자기소개 관련<br>키워드로 검색하시면 더 편리합니다.</p>
+            <p class="no-data-txt3">예) 교통사고, 홍길동, 신체 등</p>
+          </div>
+        </div>
+        <!-- matching-content -->
+      </div>
+    </div>
+
+    <hr>
+
+    @@include('@@webRoot/include/footer.html')
+  </div>
+
+<script src="@@webRoot/assets/js/swiper.min.js"></script>
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'matching'
+
+  // 검색어 스와이프
+  var hotKwSwiper = new Swiper(".hot-kw-swiper", {
+    slidesPerView: 'auto',
+    spaceBetween: 6,
+  });
+
+// 손해사 매칭 키워드 검색
+$('.schKey').matchingSch()
+</script>
+</body>
+</html>
