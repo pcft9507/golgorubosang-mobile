@@ -50,6 +50,7 @@
 
     .btn-wrap {
       margin-top: 36px;
+      padding-bottom: 16px;
 
       .btn {
         --height: 48px;
@@ -74,6 +75,7 @@
 
     .btn-wrap {
       margin-top: 36px;
+      padding-bottom: 16px;
 
       .btn {
         --height: 48px;
@@ -152,9 +154,12 @@
 
   .btn-wrap {
     margin-top: 36px;
+    padding-bottom: 16px;
 
     .btn {
-      --height: 36px;
+      --height: 48px;
+      font-weight: 600;
+      font-size: 14px;
     }
   }
 }
@@ -618,7 +623,7 @@
   .md-location {
 
     .md-loc-top {
-      padding: 0 16px;
+      padding: 16px 16px 0;
     }
 
     .md-loc-txt1 {
@@ -682,7 +687,7 @@
         align-items: center;
         width: 150px;
         height: 25px;
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }

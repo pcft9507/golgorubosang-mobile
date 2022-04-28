@@ -46,7 +46,10 @@ function htmlComplie() {
   return gulp.src(src.html)
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+      context: {
+        kakao: false
+      }
     }))
     .pipe(gulp.dest(paths.html))
     .pipe(browserSync.reload({stream:true}));

@@ -1,18 +1,3 @@
-// GNB활성화
-if (typeof page != 'undefined') {
-  if (page == 'home') {
-    $('.quickMenu__item').eq(0).find('.quickMenu__txt').addClass('on')
-  } else if (page == 'matching') {
-    $('.quickMenu__item').eq(1).find('.quickMenu__txt').addClass('on')
-  } else if (page == 'recommend') {
-    $('.quickMenu__item').eq(2).find('.quickMenu__txt').addClass('on')
-  } else if (page == 'cace') {
-    $('.quickMenu__item').eq(3).find('.quickMenu__txt').addClass('on')
-  } else if (page == 'menu') {
-    $('.quickMenu__item').eq(4).find('.quickMenu__txt').addClass('on')
-  }
-}
-
 // 상단으로 이동
 function goTop() {
   $('html').animate({
@@ -164,3 +149,21 @@ function createMap (mapEl, addr, infoWindow) {
     } 
   });      
 }
+
+// 문서 로드 후 실행
+$(document).ready(function () {
+  // GNB활성화
+  if (typeof page != 'undefined') {
+    if (page == 'home') {
+      $('.quickMenu__item').eq(0).find('.quickMenu__txt').addClass('on')
+    } else if (page == 'matching') {
+      $('.quickMenu__item').eq(1).find('.quickMenu__txt').addClass('on')
+    } else if (page == 'recommend') {
+      $('.quickMenu__item').eq(2).find('.quickMenu__txt').addClass('on')
+    } else if (page == 'case') {
+      $('.quickMenu__item').eq(3).find('.quickMenu__txt').addClass('on')
+    } else if (page == 'menu') {
+      $('.quickMenu__item').eq(4).find('.quickMenu__txt').addClass('on')
+    }
+  }
+})
