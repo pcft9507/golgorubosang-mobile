@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+
+<style>
+  .sample-wrap {padding: 50px; background: #F8F9FA;}
+  .sample-tit {font-size: 30px;}
+  .sample-tit02 {margin: 20px 0 10px; font-size: 20px;}
+  .space {margin: 50px 0;}
+  /* 임의 수치 */
+  .btn-radius {--height: 40px;} 
+  /* 임의 수치 */
+  .btn-wrap + .btn-wrap {margin-top: 10px;}
+  .btn-wrap .btn + .btn {margin-left: 10px;}
+  @media screen and (max-width: 767px) {
+    .sample-wrap {padding: 15px;}
+  }
+</style>
+<div class="sample-wrap">
+  <h1 class="sample-tit">스와이퍼탭</h1>
+
+  <div class="swiperTab">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">전체</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">실손</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">질병</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">상해</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">어린이</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">태아</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">차량파손(대물)</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">교통사고(대인)</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">배상책임</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">근로재해</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">학교안전사고</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">여행자</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">골프</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">치아</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">연금</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">도난</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">화재</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">재난</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">생명</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">침수</button></div>
+      <div class="swiper-slide"><button class="swiperTab__btn js-click-tab">기타</button></div>
+    </div>
+  </div>
+
+  <script>
+  // 스와이퍼탭
+  var swiperTab = new Swiper ('.swiperTab', {
+    slidesPerView: "auto",
+  });
+  </script>

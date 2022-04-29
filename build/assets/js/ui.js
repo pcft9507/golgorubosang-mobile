@@ -150,6 +150,48 @@ function createMap (mapEl, addr, infoWindow) {
   });      
 }
 
+// 드래그탭  
+$.fn.swiperTab = function () {
+  var swiperBody = []
+  var swiperTabArr = []
+  return this.each(function (i) {
+    swiperBody[i] = $(this);
+    var thisClass = swiperBody[i].attr('class');
+    var tabItem = swiperBody[i].find('.swiper-slide');
+    var tabBtn = swiperBody[i].find('.js-click-tab');
+    swiperTabArr[i] = new Swiper ('.swiperTab', {
+      slidesPerView: "auto",
+      observer: true,
+      slideToClickedSlide: true,
+    });
+    tabItem.eq(0).addClass('active')
+
+    tabBtn.on('click', function () {
+      var curIdx = swiperTabArr[i].activeIndex
+      tabItem.removeClass('active')
+      $(this).parent().addClass('active')
+      setTimeout(function () {
+        swiperTabArr[i].update();
+      }, 300)
+    })  
+  })
+}
+
+// 게시판 리스트
+$.fn.boardList = function () {
+  var listBody = this
+  var btnItem = listBody.find('.boardList__item')
+  var btnOpen = listBody.find('.boardList__subject')
+  var btnClose = listBody.find('.boardList__btnClose')
+  btnOpen.on('click', function () {
+    btnItem.removeClass('opened')
+    $(this).parents('.boardList__item').addClass('opened')
+  })
+  btnClose.on('click', function () {
+    $(this).parents('.boardList__item').removeClass('opened')
+  })
+}
+
 // 문서 로드 후 실행
 $(document).ready(function () {
   // GNB활성화
@@ -166,4 +208,5 @@ $(document).ready(function () {
       $('.quickMenu__item').eq(4).find('.quickMenu__txt').addClass('on')
     }
   }
+  
 })

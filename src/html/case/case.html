@@ -10,12 +10,203 @@
     <hr>
     
     <div class="l-container-sub">
-      <div class="pageTab">
-        <a href="#" class="pageTab__btn">전체</a>
-        <a href="#" class="pageTab__btn">교통사고</a>
-        <a href="#" class="pageTab__btn">후유장애 보험금</a>
-        <a href="#" class="pageTab__btn">암 진단금</a>
+      <!-- case-container -->
+      <div class="case-container">
+        <!-- swiperTab -->
+        <div class="swiperTab">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc1" onclick="clickTab(this)">전체</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc2" onclick="clickTab(this)">실손</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc3" onclick="clickTab(this)">질병</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc4" onclick="clickTab(this)">상해</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc5" onclick="clickTab(this)">어린이</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc6" onclick="clickTab(this)">태아</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc7" onclick="clickTab(this)">차량파손(대물)</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc8" onclick="clickTab(this)">교통사고(대인)</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc9" onclick="clickTab(this)">배상책임</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc10" onclick="clickTab(this)">근로재해</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc11" onclick="clickTab(this)">학교안전사고</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc12" onclick="clickTab(this)">여행자</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc13" onclick="clickTab(this)">골프</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc14" onclick="clickTab(this)">치아</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc15" onclick="clickTab(this)">연금</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc16" onclick="clickTab(this)">도난</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc17" onclick="clickTab(this)">화재</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc18" onclick="clickTab(this)">재난</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc19" onclick="clickTab(this)">생명</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc20" onclick="clickTab(this)">침수</button></div>
+            <div class="swiper-slide"><button class="swiperTab__btn js-click-tab" data-value="abc21" onclick="clickTab(this)">기타</button></div>
+          </div>
+        </div>
+        <!-- swiperTab end -->
+
+        <!-- case-top -->
+        <div class="case-top">
+          <span class="category-txt">전체(100)</span>
+          <div class="schKey">
+            <div class="schKey__inp">
+              <input type="text" class="schKey__inpTxt" placeholder="키워드를 검색해 보세요">
+              <button class="schKey__del" title="삭제"></button>
+            </div>
+            <button class="schKey__btn" title="검색하기"><span class="is-blind">검색하기</span></button>
+          </div>
+        </div>
+        <!-- case-top end -->
+
+        <ul class="boardList">
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">1</span>
+              <span class="boardList__HeadTxt">교통사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">2</span>
+              <span class="boardList__HeadTxt">후유장애 보험금</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">3</span>
+              <span class="boardList__HeadTxt">암 진단금</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+          <li class="boardList__item">
+            <div class="boardList__head">
+              <span class="boardList__headNum">4</span>
+              <span class="boardList__HeadTxt">산재사고</span>
+            </div>
+            <button class="boardList__subject">
+              제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 텍스트 제목 
+            </button>
+            <div class="boardList__cont">
+              <p>내용입니다. 내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.</p>
+              <div class="boardList__btn">
+                <button class="boardList__btnClose">닫기</button>
+              </div>
+            </div>
+          </li>
+       </ul>
       </div>
+      <!-- case-container end -->
     </div>
 
     <hr>
@@ -23,9 +214,24 @@
     @@include('@@webRoot/include/footer.html')
   </div>
 
+<script src="@@webRoot/assets/js/swiper.min.js"></script>
 <script>
   // 하단 메뉴 활성 변수 선언
   var page = 'case'
+
+  // 탭 스와이퍼
+  $('.swiperTab').swiperTab()
+
+  // 탭 클릭
+  function clickTab(el) {
+    var el = $(el)
+    var text = el.text()
+    var value = el.attr('data-value')
+    console.log(text, 'value:' + value)
+  }
+
+  // 게시판 열기
+  $('.boardList').boardList()
 </script>
 </body>
 </html>

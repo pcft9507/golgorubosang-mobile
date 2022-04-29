@@ -1,0 +1,29 @@
+.case-container {
+  padding-bottom: 16px;
+}
+
+.case-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 0;
+}
+
+.case-top .category-txt {
+  color: #394048;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.case-top .schKey {
+  width: 168px;
+  padding: 0;
+}
+
+.case-top .schKey__inpTxt {
+  padding: 0 12px;
+}
+
+.case-top .schKey__inpTxt::placeholder {
+  font-size: 10px;
+}
