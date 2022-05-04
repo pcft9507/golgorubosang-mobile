@@ -204,7 +204,7 @@ $(document).ready(function () {
       $('.quickMenu__item').eq(2).find('.quickMenu__txt').addClass('on')
     } else if (page == 'case') {
       $('.quickMenu__item').eq(3).find('.quickMenu__txt').addClass('on')
-    } else if (page == 'menu') {
+    } else if (page == 'more') {
       $('.quickMenu__item').eq(4).find('.quickMenu__txt').addClass('on')
     }
   }
