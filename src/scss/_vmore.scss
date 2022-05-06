@@ -821,3 +821,90 @@
 .dictionara-container {
   padding-bottom: 30px;
 }
+
+.howto-container {
+  padding-bottom: 36px;
+
+  .howto-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 160px;
+    background: url($imgVisual + 'v-howto.png') 50%/cover no-repeat;
+
+    .v-txt {
+      width: 274px;
+    }
+  }
+
+  .howto-cont {
+    margin-top: 24px;
+    padding: 0 16px;
+
+    &:nth-of-type(1) {
+
+      .cont-header {
+        background: $themeColor01;
+      }
+    }
+
+    &:nth-of-type(2) {
+
+      .cont-header {
+        background: $themeColor03;
+      }
+    }
+
+    &:nth-of-type(3) {
+
+      .cont-header {
+        background: $themeColor04;
+      }
+    }
+
+    .cont-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 48px;
+      border-radius: 24px;
+
+      .num {
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        opacity: 0.6;
+      }
+
+      .title {
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+
+    .howto-cont-txt1 {
+      margin-top: 16px;
+      color: #1b2432;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.96px;
+      text-align: center;
+    }
+
+    .howto-cont-txt2 {
+      margin-top: 16px;
+      color: #787e85;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.72px;
+      text-align: center;
+    }
+  }
+}

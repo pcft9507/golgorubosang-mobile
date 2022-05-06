@@ -1,0 +1,104 @@
+@@include('@@webRoot/include/head.html')
+
+<body>
+  <div class="wrap">
+    @@include('@@webRoot/include/header_sub.html', {
+      title: '더보기',
+      kakao: true
+    })
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <!-- pageTab -->
+      <div class="pageTab">
+        <a href="service.html" class="pageTab__btn">서비스소개</a>
+        <a href="safe_transaction.html" class="pageTab__btn">안심거래</a>
+        <a href="dictionary.html" class="pageTab__btn">용어사전</a>
+        <a href="howto.html" class="pageTab__btn pageTab__btn--active">이용방법</a>
+      </div>
+      <!-- pageTab end -->
+
+      <!-- howto-container -->
+      <div class="howto-container">
+        <!-- howto-visual -->
+        <div class="howto-visual">
+          <figure class="v-txt">
+            <figcaption>비주얼 이미지 문구</figcaption>
+            <img src="@@webRoot/assets/images/sub/img-howto-txt.png" alt="쉽고 빠르게 정확한 금액으로 보상 받으세요">
+          </figure>
+        </div>
+        <!-- howto-visual end -->
+
+        <!-- howto-cont -->
+        <div class="howto-cont-wrap">
+          <div class="howto-cont cont1">
+            <div class="cont-header">
+              <span class="num">01 /</span>
+              <p class="title">상담 접수</p>
+            </div>
+            <p class="howto-cont-txt1">
+              상담을 희망하는 사고 유형 및 지역과<br>
+              간략한 내용을 접수해주세요.
+            </p>
+            <p class="howto-cont-txt2">나에게 맞는 손해사정사를 직접 선택해보세요</p>
+            <p class="howto-cont-txt2">
+              직접 선택이 어려우시다면? 걱정마세요~<br>
+              나의 상황에 맞는 옵션을 선택 후 상담을 남겨주시면<br>
+              고객님에게 가장 적합한 손해사정사를 무료로 매칭해드립니다.</p>
+          </div>
+          <!-- howto-cont end -->
+          
+          <!-- howto-cont -->
+          <div class="howto-cont cont2">
+            <div class="cont-header">
+              <span class="num">02 /</span>
+              <p class="title">무료 매칭</p>
+            </div>
+            <p class="howto-cont-txt1">
+              전국의 전문 독립손해사정사가 빠르게<br>
+              직접 연락을 드립니다.
+            </p>
+            <p class="howto-cont-txt2">고객님의 사고 유형/지역에 맞는 전문 독립손사가 연락을 드립니다.</p>
+          </div>
+          <!-- howto-cont end -->
+          
+          <!-- howto-cont -->
+          <div class="howto-cont cont3">
+            <div class="cont-header">
+              <span class="num">03 /</span>
+              <p class="title">손해사정 진행</p>
+            </div>
+            <p class="howto-cont-txt1">
+              고객님과 손해사정사의 무료상담 협의 후,<br>
+              손해사정이 진행됩니다.
+            </p>
+            <p class="howto-cont-txt2">
+              고객님의 입장에 서서<br>
+              정확한 금액으로 보상받으실 수 있게 도와 드립니다.
+            </p>
+          </div>
+          <!-- howto-cont end -->
+        </div>
+      </div>
+      <!-- howto-container end -->
+    </div>
+
+    <hr>
+
+    @@include('@@webRoot/include/footer.html')
+  </div>
+
+<script src="@@webRoot/assets/js/swiper.min.js"></script>
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'more'
+
+  // 보상사례 보기
+  var paSwiper = new Swiper(".sv-desc-swiper", {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+  });
+</script>
+</body>
+</html>
