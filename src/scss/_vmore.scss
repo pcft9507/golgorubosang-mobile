@@ -916,3 +916,194 @@
 .notice-container {
   padding-bottom: 30px;
 }
+
+.branch-container {
+  padding: 16px;
+
+  .schKey {
+    padding-top: 0;
+
+    & + .total-cnt {
+      margin-top: 8px;
+    }
+  }
+
+  .total-cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .total-cnt-txt1 {
+      position: relative;
+      padding-top: 17px;
+      color: #1b2432;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 7px;
+        background: #00FF89;
+      }
+    }
+
+    .total-cnt-txt2 {
+      color: #1b2432;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: 0;
+    }
+
+    .total-cnt-point {
+      position: relative;
+      top: 3px;
+      color: #f70f66;
+      font-weight: 700;
+      font-size: 32px;
+    }
+  }
+
+  .branch-map {
+    margin-top: 16px;
+
+    .map-img {
+      position: relative;
+      width: 270px;
+      margin: 0 auto;
+    }
+
+    .area-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 1;
+      min-width: 76px;
+      height: 36px;
+      padding: 0 7px;
+      background: #fff;
+      color: #111;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid #394048;
+      border-radius: 8px;
+      white-space: nowrap;
+
+      &.kw {
+        top: 7px;
+        left: 142px;
+      }
+
+      &.seoul {
+        top: 26px;
+        left: 56px;
+      }
+
+      &.ic {
+        top: 43px;
+        left: -22px;
+      }
+
+      &.kg {
+        top: 68px;
+        left: 105px;
+      }
+
+      &.cb {
+        top: 111px;
+        left: 127px;
+      }
+
+      &.dj {
+        top: 138px;
+        left: 49px;
+      }
+
+      &.kb {
+        top: 138px;
+        left: 223px;
+      }
+
+      &.cn {
+        top: 156px;
+        left: -29px;
+      }
+
+      &.dg {
+        top: 174px;
+        left: 142px;
+      }
+
+      &.us {
+        top: 204px;
+        left: 223px;
+      }
+
+      &.jb {
+        top: 214px;
+        left: 6px;
+      }
+
+      &.kn {
+        top: 251px;
+        left: 126px;
+      }
+
+      &.kj {
+        top: 278px;
+        left: 29px;
+      }
+
+      &.bs {
+        top: 314px;
+        left: 223px;
+      }
+
+      &.jn {
+        top: 323px;
+        left: 0;
+      }
+
+      &.jj {
+        top: 395px;
+        left: 92px;
+      }
+    }
+  }
+
+  .branch-txt1 {
+    margin-top: 38px;
+    color: #1b2432;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: -0.96px;
+  }
+
+  .branch-txt2 {
+    margin-top: 24px;
+    color: #394048;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .btn-wrap {
+    margin-top: 24px;
+
+    .btn {
+      --height: 42px;
+      color: #111;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}

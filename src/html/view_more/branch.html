@@ -1,0 +1,102 @@
+@@include('@@webRoot/include/head.html')
+
+<body>
+  <div class="wrap">
+    @@include('@@webRoot/include/header_sub.html', {
+      title: '더보기',
+      kakao: true
+    })
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <!-- pageTab -->
+      <div class="pageTab">
+        <a href="service.html" class="pageTab__btn pageTab__btn--active">전국 제휴 현황</a>
+        <a href="howto.html" class="pageTab__btn">전국 병원 검색</a>
+      </div>
+      <!-- pageTab end -->
+
+      <!-- branch-container -->
+      <div class="branch-container">
+        <!-- schKey -->
+        <div class="schKey">
+          <div class="schKey__inp">
+            <input type="text" class="schKey__inpTxt" placeholder="손해사정사를 검색하세요">
+            <button class="schKey__del" title="삭제"></button>
+          </div>
+          <button class="schKey__btn" title="검색하기"><span class="is-blind">검색하기</span></button>
+        </div>
+        <!-- schKey end -->
+
+        <!-- total-cnt -->
+        <div class="total-cnt">
+          <div class="total-cnt-col">
+            <p class="total-cnt-txt1">전국 독립손해사정사 TOTAL</p>
+          </div>
+          <div class="total-cnt-col">
+            <p class="total-cnt-txt2">
+              <strong class="total-cnt-point">7,000</strong>
+              명
+            </p>
+          </div>
+        </div>
+        <!-- total-cnt -->
+
+        <!-- branch-map -->
+        <div class="branch-map">
+          <figure class="map-img">
+            <figcaption>전국지도</figcaption>
+            <img src="@@webRoot/assets/images/sub/img-map.png">
+            <div class="area-box kw">강원도(437)</div>
+            <div class="area-box seoul">서울(437)</div>
+            <div class="area-box ic">인천(437)</div>
+            <div class="area-box kg">경기(437)</div>
+            <div class="area-box cb">충북(437)</div>
+            <div class="area-box dj">대전(24)</div>
+            <div class="area-box kb">경북(24)</div>
+            <div class="area-box cn">충남(24)</div>
+            <div class="area-box dg">대구(24)</div>
+            <div class="area-box us">울산(24)</div>
+            <div class="area-box jb">전북(24)</div>
+            <div class="area-box kn">경남(24)</div>
+            <div class="area-box kj">광주(24)</div>
+            <div class="area-box bs">부산(240)</div>
+            <div class="area-box jn">전남(24)</div>
+            <div class="area-box jj">제주도(240)</div>
+          </figure>
+        </div>
+        <!-- branch-map end -->
+
+        <p class="branch-txt1">전국의 고객님을 모두 골고루보상 해드리는 날까지!</p>
+        <p class="branch-txt2">
+          골고루보상은 오늘도 전국에 계신 고객님을 위해<br>
+          열심히 뛰고 있습니다.<br>
+          전국 각지에 계신 손해사정사님 모두 골고루보상을 통해<br>
+          매칭해드릴 수 있도록 기다려주세요!<br><br>
+          우리동네에는 손해사정사가 없어서 걱정되시나요?<br><br>
+          이미 전국 어디서나 손해사정사가 고객님께<br>
+          달려갈 수 있도록 대기 중입니다.<br><br>
+          지금바로 골고루보상을 통해 독립손사를 매칭해보세요~ 
+        </p>
+        <div class="btn-wrap">
+          <button class="btn w-pc-100 btn-radius theme05">골고루보상 독립손해사정사 제휴/문의</button>
+        </div>
+      </div>
+      <!-- branch-container end -->
+    </div>
+
+    <hr>
+
+    @@include('@@webRoot/include/footer.html')
+  </div>
+
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'more'
+  
+  // 게시판
+  $('.boardList').boardList()
+</script>
+</body>
+</html>
