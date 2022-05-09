@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">더보기</h1>
+  
+    <button class="goKakao">카카오톡 상담하기</button>
+  
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <!-- pageTab -->
+      <div class="pageTab">
+        <a href="branch.html" class="pageTab__btn">전국 제휴 현황</a>
+        <a href="hospitel.html" class="pageTab__btn pageTab__btn--active">전국 병원 검색</a>
+      </div>
+      <!-- pageTab end -->
+
+      <!-- hospitel-container -->
+      <div class="hospitel-container">
+        <div class="sch-hspt">
+          <div class="sch-hspt-top">
+            <p class="sch-hspt-tit">전국 지역 병원 찾기</p>
+            <div class="sch-hspt-sel">
+              <button class="sch-hspt-btn"><span class="txt">검색조건 접기</span></button>
+            </div>
+          </div>
+          <div class="formInp">
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <select required class="formInp__select" title="시도 선택">
+                    <option value="">선택</option>
+                    <option value="">서울특별시</option>
+                    <option value="">경기</option>
+                  </select>
+                </div>
+              </div>
+            
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <select required class="formInp__select" title="군구 선택">
+                    <option value="">선택</option>
+                    <option value="">선택2</option>
+                    <option value="">선택3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <input type="text" id="writerName" class="formInp__inpTxt" placeholder="예) 홍길동" title="(선택) 읍,면,동" spellcheck="false" data-ms-editor="true">
+                </div>
+              </div>
+            
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <input type="text" id="birthDay" class="formInp__inpTxt" placeholder="예) 1980-01-01" title="(선택) 병원명" spellcheck="false" data-ms-editor="true">
+                </div>
+              </div>
+            </div>
+        
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <select required class="formInp__select" title="병원 선택">
+                    <option value="">선택</option>
+                    <option value="">종합병원1</option>
+                    <option value="">종합병원2</option>
+                  </select>
+                </div>
+              </div>
+            
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <select required class="formInp__select" title="병원 선택">
+                    <option value="">선택</option>
+                    <option value="">상급종합병원1</option>
+                    <option value="">상급종합병원2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <div class="formInp__inpWrap">
+                  <select required class="formInp__select" title="진료과목 선택">
+                    <option value="">(선택) 병원진료과목</option>
+                    <option value="">소아과</option>
+                    <option value="">내과</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- cardList -->
+        <ul class="cardList">
+          <li class="cardList__item">
+            <p class="cardList__ctg">상급종합</p>
+            <p class="cardList__sbj">강북삼성병원</p>
+            <p class="cardList__txt">서울특별시 종로구 새문안로 29(평동)</p>
+            <a href="../matching/hospitel_detail.html" class="cardList__detail">상세보기</a>
+          </li>
+          <li class="cardList__item">
+            <p class="cardList__ctg">상급종합</p>
+            <p class="cardList__sbj">강북삼성병원</p>
+            <p class="cardList__txt">서울특별시 종로구 새문안로 29(평동)</p>
+            <a href="../matching/hospitel_detail.html" class="cardList__detail">상세보기</a>
+          </li>
+          <li class="cardList__item">
+            <p class="cardList__ctg">상급종합</p>
+            <p class="cardList__sbj">강북삼성병원</p>
+            <p class="cardList__txt">서울특별시 종로구 새문안로 29(평동)</p>
+            <a href="../matching/hospitel_detail.html" class="cardList__detail">상세보기</a>
+          </li>
+          <li class="cardList__item">
+            <p class="cardList__ctg">상급종합</p>
+            <p class="cardList__sbj">강북삼성병원</p>
+            <p class="cardList__txt">서울특별시 종로구 새문안로 29(평동)</p>
+            <a href="../matching/hospitel_detail.html" class="cardList__detail">상세보기</a>
+          </li>
+          <li class="cardList__item">
+            <p class="cardList__ctg">상급종합</p>
+            <p class="cardList__sbj">강북삼성병원</p>
+            <p class="cardList__txt">서울특별시 종로구 새문안로 29(평동)</p>
+            <a href="../matching/hospitel_detail.html" class="cardList__detail">상세보기</a>
+          </li>
+        </ul>
+        <!-- cardList -->
+      </div>
+      <!-- hospitel-container end -->
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'more'
+
+  // 병원 찾기 열기
+  $('.sch-hspt-btn').on('click', function () {
+    var schBody = $(this).parents('.sch-hspt')
+    var schBodyForm = schBody.find('.formInp')
+    if (schBody.hasClass('open')) {
+      schBody.removeClass('open')
+      schBodyForm.stop().slideUp(200)
+    } else {
+      schBody.addClass('open')
+      schBodyForm.stop().slideDown(200)
+    }
+  })
+</script>
+</body>
+</html>

@@ -671,6 +671,34 @@
     }
   }
 
+  &__ctg {
+    display: inline-block;
+    position: relative;
+    color: #1b2432;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 7px;
+      background: #00FF89;
+    }
+
+    & + .cardList__sbj {
+      margin-top: 6px;
+    }
+
+    & + .cardList__txt {
+      margin-top: 8px;
+    }
+  }
+
   &__sbj {
     color: #1b2432;
     font-weight: 600;
