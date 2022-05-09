@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">더보기</h1>
+  
+    <button class="goKakao">카카오톡 상담하기</button>
+  
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub">
+      <!-- pageTab -->
+      <div class="pageTab">
+        <a href="service.html" class="pageTab__btn pageTab__btn--active">전국 제휴 현황</a>
+        <a href="howto.html" class="pageTab__btn">전국 병원 검색</a>
+      </div>
+      <!-- pageTab end -->
+
+      <!-- branch-container -->
+      <div class="branch-container">
+        <!-- schKey -->
+        <div class="schKey">
+          <div class="schKey__inp">
+            <input type="text" class="schKey__inpTxt" placeholder="손해사정사를 검색하세요">
+            <button class="schKey__del" title="삭제"></button>
+          </div>
+          <button class="schKey__btn" title="검색하기"><span class="is-blind">검색하기</span></button>
+        </div>
+        <!-- schKey end -->
+
+        <!-- totalCnt -->
+        <div class="totalCnt">
+          <div class="totalCnt-col">
+            <p class="totalCnt-txt1"><span class="keyword">'고길동'</span> 독립손해사정사 TOTAL</p>
+          </div>
+          <div class="totalCnt-col">
+            <p class="totalCnt-txt2">
+              <strong class="totalCnt-point">0</strong>
+              명
+            </p>
+          </div>
+        </div>
+        <!-- totalCnt -->
+
+        <!-- branch-no-data -->
+        <div class="branch-no-data">
+          <p class="no-data-txt1">찾으시는 손해사정사가 검색이 안돼시나요?</p>
+          <p class="no-data-txt2">
+            지역을 선택하시면<br>
+            많은 독립손사분들이 고객님을 기다리고 있습니다.
+          </p>
+        </div>
+        <!-- branch-no-data end -->
+
+        <!-- chipList-wrap -->
+        <div class="chipList-wrap">
+          <ul class="chipList">
+            <li class="chipList__item"><button class="chipTab chipTab--active">서울</button></li>
+            <li class="chipList__item"><button class="chipTab">경기</button></li>
+            <li class="chipList__item"><button class="chipTab">부산</button></li>
+            <li class="chipList__item"><button class="chipTab">대구</button></li>
+            <li class="chipList__item"><button class="chipTab">제주</button></li>
+            <li class="chipList__item"><button class="chipTab">대전</button></li>
+            <li class="chipList__item"><button class="chipTab">경북</button></li>
+            <li class="chipList__item"><button class="chipTab">경남</button></li>
+          </ul>
+        </div>
+        <!-- chipList-wrap end -->
+      </div>
+      <!-- branch-container end -->
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'more'
+  
+  // 게시판
+  $('.boardList').boardList()
+</script>
+</body>
+</html>

@@ -1067,8 +1067,12 @@
 
   .chipList-wrap {
     height: 32px;
-    margin: 8px -16px 0 0;
+    margin: 0 -16px 0 0;
     overflow: hidden;
+  }
+
+  .totalCnt + .chipList-wrap {
+    margin-top: 16px;
   }
 
   .chipList {
@@ -1082,6 +1086,44 @@
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  .branch-no-data {
+    padding-top: 56px;
+
+    .no-data-txt1 {
+      position: relative;
+      padding-top: 100px;
+      color: #1b2432;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -1.08px;
+      text-align: center;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 86px;
+        height: 88px;
+        margin-left: -42px;
+        background: url($imgSub + 'bg-matching.png') -2px -1px/90px no-repeat;
+      }
+    }
+
+    .no-data-txt2 {
+      margin-top: 16px;
+      color: #787e85;
+      font-size: 14px;
+      letter-spacing: -0.84px;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    & + .chipList-wrap {
+      margin-top: 48px;
     }
   }
 }
