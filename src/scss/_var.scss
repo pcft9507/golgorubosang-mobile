@@ -28,7 +28,7 @@ $radio-color: #00005c;
   @each $prop, $prop-name in ('m': 'margin', 'p': 'padding') {
     @for $i from 0 through 100 {
       .#{$prop}#{$abbr}-#{$i} {
-        #{$prop-name}-#{$name}: 1px * $i;
+        #{$prop-name}-#{$name}: 1px * $i !important;
       }
     }
   }
