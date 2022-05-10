@@ -360,6 +360,7 @@
         height: 88px;
         padding: 14px 16px 0 16px;
         background: #105DE1 url($imgSub + 'bg-matching-speed.jpg') 100% 0/ auto 100% no-repeat;
+        border-radius: 10px;
       }
 
       .ban-speed-tit {
@@ -396,6 +397,7 @@
         margin-left: 8px;
         padding: 14px 16px 0 16px;
         background: #04c977 url($imgSub + 'bg-matching-free.jpg') 100% 100%/ auto 100% no-repeat;
+        border-radius: 10px;
       }
 
       
@@ -504,7 +506,6 @@
 
     .inner-box {
       padding-bottom: 16px;
-      border: 1px solid #e9eaee;
       border-radius: 0 0 8px 8px;
       background: #fff;
     }

@@ -223,7 +223,7 @@
       color: #787e85;
       font-weight: 500;
       font-size: 10px;
-      border-bottom: 1px solid #dedede;
+      border-bottom: 1px solid #C0C1CA;
     }
 
     .menu-list {
@@ -231,7 +231,7 @@
     }
 
     .menu-item {
-      border-bottom: 1px solid #dedede;
+      border-bottom: 1px solid #E9EAEE;
 
       &:last-child {
         border-bottom: 0;
@@ -263,7 +263,7 @@
 
       .info-item {
         padding: 8px 0;
-        border-bottom: 1px solid #dedede;
+        border-bottom: 1px solid #E9EAEE;
 
         &:last-child {
           border-bottom: 0;
@@ -363,6 +363,7 @@
       color: #fff;
       font-weight: 500;
       font-size: 22px;
+      line-height: 30px;
       letter-spacing: -1.32px;
     }
 
@@ -555,6 +556,7 @@
     &-txt {
       margin-bottom: 8px;
       color: #fff;
+      font-weight: 500;
       line-height: 38px;
       text-align: center;
 
@@ -710,6 +712,7 @@
       }
 
       .head-num {
+        display: block;
         color: #fff;
         font-weight: 200;
         font-size: 12px;
@@ -717,11 +720,12 @@
       }
 
       .head-txt {
+        display: block;
         margin-top: 2px;
         color: #fff;
         font-weight: 600;
         font-size: 18px;
-        line-height: 16px;
+        line-height: 25px;
         text-shadow: 0 1px 2px rgba(5, 5, 5, 0.2);
       }
     }

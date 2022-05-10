@@ -185,3 +185,7 @@ button {
   overflow: hidden;
 }
 
+.pageTab + *[class$=-container] {
+  height: calc(100% - 36px);
+  overflow-y: auto;
+}
