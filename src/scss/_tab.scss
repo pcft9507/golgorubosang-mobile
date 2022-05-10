@@ -48,20 +48,12 @@
     height: 36px;
     color: #394048;
     font-size: 14px;
+    border-bottom: 1px solid #e9eaee;
 
     &--active {
       color: #111;
       font-weight: 500;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: #111;
-      }
+      border-bottom: 1px solid #111;
     }
   }
 }

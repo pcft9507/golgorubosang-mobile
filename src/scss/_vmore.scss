@@ -906,7 +906,7 @@
       margin-top: 16px;
       color: #787e85;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 20px;
       letter-spacing: -0.72px;
       text-align: center;
     }
@@ -1075,12 +1075,9 @@
     overflow: hidden;
   }
 
-  .totalCnt + .chipList-wrap {
-    margin-top: 16px;
-  }
-
   .chipList {
     padding: 0 16px 30px 0;
+    margin-right: -16px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -1094,7 +1091,17 @@
   }
 
   .branch-no-data {
-    padding-top: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(100% - 61px);
+    margin-bottom: -16px;
+
+    &-in {
+      margin: 0 -16px;
+      overflow: hidden;
+    }
 
     .no-data-txt1 {
       position: relative;
@@ -1127,7 +1134,16 @@
     }
 
     & + .chipList-wrap {
+      overflow: hidden;
       margin-top: 48px;
+    }
+
+    .chipList-wrap {
+      position: absolute;
+      bottom: 46px;
+      left: -16px;
+      width: calc(100% + 32px);
+      padding: 0 16px;
     }
   }
 }
@@ -1135,6 +1151,7 @@
 .hospitel-container {
   
   .sch-hspt {
+    max-height: 252px;
     padding: 16px;
     background: #f2f2f3;   
     
@@ -1205,6 +1222,15 @@
         padding: 0 8px;
         font-weight: 500;
       }
+    }
+
+    & + .cardList {
+      height: calc(100% - 56px);
+      overflow-y: auto;
+    }
+
+    &.open + .cardList {
+      height: calc(100% - 252px);
     }
   }
 }
@@ -1312,8 +1338,10 @@
 .event-container {
   
   .event-no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    padding-top: 114px;
   }
 
   .no-data-txt {

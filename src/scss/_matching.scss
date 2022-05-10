@@ -436,8 +436,11 @@
   }
 
   &-no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100%;
-    padding-top: 108px;
     background: #f2f2f3;
 
     .no-data-txt1 {

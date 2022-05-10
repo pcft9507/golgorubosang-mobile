@@ -1,0 +1,56 @@
+.swiperTab {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiperTab__btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 42px;
+  padding: 0 16px;
+  color: #394048;
+  font-size: 14px;
+}
+
+.swiperTab .swiper-slide {
+  width: auto !important;
+}
+
+.swiperTab .swiper-slide.active .swiperTab__btn {
+  color: #111;
+  font-weight: 500;
+}
+
+.swiperTab .swiper-slide.active .swiperTab__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #111;
+}
+
+.pageTab {
+  display: flex;
+  background: #fff;
+}
+
+.pageTab__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 36px;
+  color: #394048;
+  font-size: 14px;
+  border-bottom: 1px solid #e9eaee;
+}
+
+.pageTab__btn--active {
+  color: #111;
+  font-weight: 500;
+  border-bottom: 1px solid #111;
+}
