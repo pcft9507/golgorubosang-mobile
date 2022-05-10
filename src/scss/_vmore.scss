@@ -1322,3 +1322,15 @@
     background: url($imgSub + 'img-event-caution.png') 50% 0/84px no-repeat;
   }
 }
+
+.agreement-container {
+
+  .agreement-txt {
+    padding: 16px;
+    color: #394048;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    white-space: pre-line;
+  }
+}
