@@ -109,6 +109,23 @@ button {
   }
 }
 
+#map {
+  * {
+    max-width: 150px;
+    box-sizing: content-box;
+    text-align: center;
+  }
+  
+  .info-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 25px;
+    font-size: 13px;
+  }
+}
+
 .d-flex {
   &-s-s {
     justify-content: flex-start;

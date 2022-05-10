@@ -107,7 +107,7 @@ function copyText(element){
 }
 
 // 카카오지도 1.요소, 2.도로명주소, 3.마커위에 인포윈도우
-function createMap (mapEl, addr, infoWindow) {
+function createMap (mapEl, addr, infoWindow, type) {
   // 지도 실행 스크립트
   var mapContainer = document.getElementById(mapEl), // 지도를 표시할 div 
   mapOption = {
@@ -140,9 +140,15 @@ function createMap (mapEl, addr, infoWindow) {
           position: coords
       });
       // 인포윈도우로 장소에 대한 설명을 표시합니다 (필요한 경우에만)
-      var infowindow = new kakao.maps.InfoWindow({
+      if (type == 'hospitel') {
+        var infowindow = new kakao.maps.InfoWindow({
+          content: '<div class="info-window d-flex-c-c">' + infoName + '</div>'
+        });
+      } else {
+        var infowindow = new kakao.maps.InfoWindow({
           content: '<div class="info-window d-flex-c-c">' + infoName + ' 손해사정사</div>'
-      });
+        });
+      }
       infowindow.open(map, marker);
       // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
       map.setCenter(coords);

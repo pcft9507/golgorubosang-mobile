@@ -1,10 +1,24 @@
-@@include('@@webRoot/include/head.html')
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
 <body>
   <div class="wrap">
-    @@include('@@webRoot/include/header_sub.html', {
-      title: '상세보기',
-      kakao: true
-    })
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">상세보기</h1>
+  
+    <button class="goKakao">카카오톡 상담하기</button>
+  
+</header>
 
     <hr>
     
@@ -54,7 +68,36 @@
 
     <hr>
 
-    @@include('@@webRoot/include/footer.html')
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
   </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c7de0761cab8833759b89d424e98bd32&libraries=services"></script>

@@ -676,19 +676,6 @@
     .md-loc-map {
       height: 326px;
       margin-top: 8px;
-
-      * {
-        box-sizing: content-box;
-      }
-
-      .info-window {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 25px;
-        font-size: 13px;
-      }
     }
   }
 
