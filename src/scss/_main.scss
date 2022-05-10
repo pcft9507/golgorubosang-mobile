@@ -519,6 +519,7 @@
       right: 16px;
       width: 57px;
       height: 24px;
+      line-height: 1.33;
       color: #1b2432;
       font-size: 12px;
       letter-spacing: -0.24px;
@@ -578,6 +579,7 @@
       right: 16px;
       width: 57px;
       height: 24px;
+      line-height: 1.33;
       color: #1b2432;
       font-size: 12px;
       letter-spacing: -0.24px;
@@ -640,10 +642,12 @@
         height: 46px;
 
         .subject {
+          display: block;
           width: calc(100% - 78px);
           color: #1b2432;
           font-weight: 500;
           font-size: 14px;
+          line-height: 1.33;
           letter-spacing: -0.28px;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -669,6 +673,7 @@
       right: 16px;
       width: 57px;
       height: 24px;
+      line-height: 1.33;
       color: #1b2432;
       font-size: 12px;
       letter-spacing: -0.24px;

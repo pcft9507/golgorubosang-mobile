@@ -1151,7 +1151,7 @@
 .hospitel-container {
   
   .sch-hspt {
-    max-height: 252px;
+    max-height: 310px;
     padding: 16px;
     background: #f2f2f3;   
     
@@ -1225,12 +1225,51 @@
     }
 
     & + .cardList {
-      height: calc(100% - 56px);
+      height: calc(100% - 130px);
       overflow-y: auto;
     }
 
     &.open + .cardList {
-      height: calc(100% - 252px);
+      height: calc(100% - 384px);
+    }
+
+    .btn-sch-hospitel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 42px;
+      margin-top: 16px;
+      border-radius: 4px;
+      background: #787e85;
+
+      .txt {
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.33;
+      }
+    }
+  }
+
+  .btn-wrap-more {
+    padding: 16px;
+
+    .btn-more-view {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 42px;
+      border-radius: 4px;
+      border: solid 1px rgba(192, 193, 202, 0.6);
+      background-color: #f9f9fa;
+    }
+
+    .txt {
+      color: #394048;
+      font-size: 16px;
+      line-height: 1.33;
     }
   }
 }
