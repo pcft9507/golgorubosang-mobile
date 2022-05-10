@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">더보기</h1>
+  
+    <button class="goKakao">카카오톡 상담하기</button>
+  
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub bg-gray">
+      <!-- pageTab -->
+      <div class="pageTab">
+        <a href="event.html" class="pageTab__btn">진행중</a>
+        <a href="event_end.html" class="pageTab__btn pageTab__btn--active">마감</a>
+      </div>
+      <!-- pageTab end -->
+
+      <!-- event-container -->
+      <div class="event-container">
+        <div class="event-no-data">
+          <p class="no-data-txt">" 마감된 이벤트 & 제휴가 없습니다. "</p>
+        </div>
+      </div>
+      <!-- event-container end -->
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">보상사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'more'
+</script>
+</body>
+</html>

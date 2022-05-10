@@ -741,6 +741,48 @@
   }
 }
 
+.galleryList {
+
+  &__info {
+    padding: 16px;
+  }
+
+  &__ctg {
+    color: #787e85;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__sbj {
+    margin-top: 6px;
+    color: #394048;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__ban {
+    position: relative;
+    font-size: 0;
+  }
+
+  &.ended {
+
+    .galleryList__ban {
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: rgba(27, 36, 50, 0.7);
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 375px) {
   

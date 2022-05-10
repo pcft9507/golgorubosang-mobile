@@ -1304,3 +1304,21 @@
     }
   }
 }
+
+.event-container {
+  
+  .event-no-data {
+    height: 100%;
+    padding-top: 114px;
+  }
+
+  .no-data-txt {
+    position: relative;
+    padding-top: 100px;
+    color: #1b2432;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    background: url($imgSub + 'img-event-caution.png') 50% 0/84px no-repeat;
+  }
+}

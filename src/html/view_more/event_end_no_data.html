@@ -1,0 +1,39 @@
+@@include('@@webRoot/include/head.html')
+
+<body>
+  <div class="wrap">
+    @@include('@@webRoot/include/header_sub.html', {
+      title: '더보기',
+      kakao: true
+    })
+
+    <hr>
+    
+    <div class="l-container-sub bg-gray">
+      <!-- pageTab -->
+      <div class="pageTab">
+        <a href="event.html" class="pageTab__btn">진행중</a>
+        <a href="event_end.html" class="pageTab__btn pageTab__btn--active">마감</a>
+      </div>
+      <!-- pageTab end -->
+
+      <!-- event-container -->
+      <div class="event-container">
+        <div class="event-no-data">
+          <p class="no-data-txt">" 마감된 이벤트 & 제휴가 없습니다. "</p>
+        </div>
+      </div>
+      <!-- event-container end -->
+    </div>
+
+    <hr>
+
+    @@include('@@webRoot/include/footer.html')
+  </div>
+
+<script>
+  // 하단 메뉴 활성 변수 선언
+  var page = 'more'
+</script>
+</body>
+</html>
