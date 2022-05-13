@@ -281,6 +281,10 @@
 
     &.searched + .matching-content {
       height: calc(100% - 92px);
+
+      .matching-no-data {
+        height: calc(100% - 232px);
+      }
     }
   }
 
