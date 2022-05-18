@@ -539,31 +539,15 @@
   function onYouTubeIframeAPIReady() {
     goltv1 = new YT.Player('goltv1', {
       videoId: 'xFp7LMAiwd4',
-      events: {
-        'onStateChange': onPlayerStateChange
-      }
     });
     goltv2 = new YT.Player('goltv2', {
       videoId: 'mgsSgqAm1Hk',
-      events: {
-        'onStateChange': onPlayerStateChange
-      }
     });
     goltv3 = new YT.Player('goltv3', {
       videoId: '9YkhWf6PO74',
-      events: {
-        'onStateChange': onPlayerStateChange
-      }
     });
   }
 
-  var done = false;
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-      setTimeout(stopVideo, 6000);
-      done = true;
-    }
-  }
   function stopVideo() {
     goltv1.stopVideo();
     goltv2.stopVideo();
