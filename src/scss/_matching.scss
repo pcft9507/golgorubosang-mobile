@@ -282,8 +282,11 @@
     &.searched + .matching-content {
       height: calc(100% - 92px);
 
-      .matching-no-data {
-        height: calc(100% - 232px);
+      .matching-list-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100% - 232px);
       }
     }
   }
@@ -403,7 +406,6 @@
         background: #04c977 url($imgSub + 'bg-matching-free.jpg') 100% 100%/ auto 100% no-repeat;
         border-radius: 10px;
       }
-
       
       .ban-free-tit {
         display: inline-block;
@@ -414,6 +416,8 @@
         font-size: 16px;
         line-height: 23px;
         letter-spacing: -0.96px;
+        white-space: nowrap;
+
         &::after {
           display: inline-block;
           content: '';

@@ -340,13 +340,13 @@
         <div class="swiper goltv-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <iframe src="https://www.youtube.com/embed/xFp7LMAiwd4?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              <div id="goltv1"></div>
             </div>
             <div class="swiper-slide">
-              <iframe src="https://www.youtube.com/embed/mgsSgqAm1Hk?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              <div id="goltv2"></div>
             </div>
             <div class="swiper-slide">
-              <iframe src="https://www.youtube.com/embed/9YkhWf6PO74?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+              <div id="goltv3"></div>
             </div>
           </div>
           <div class="goltv-swiper-page"></div>
@@ -569,31 +569,71 @@
   });  
 
   // 골고루보상 티비
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var goltv1, goltv2, goltv3;
+  function onYouTubeIframeAPIReady() {
+    goltv1 = new YT.Player('goltv1', {
+      videoId: 'xFp7LMAiwd4',
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+    goltv2 = new YT.Player('goltv2', {
+      videoId: 'mgsSgqAm1Hk',
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+    goltv3 = new YT.Player('goltv3', {
+      videoId: '9YkhWf6PO74',
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      setTimeout(stopVideo, 6000);
+      done = true;
+    }
+  }
+  function stopVideo() {
+    goltv1.stopVideo();
+    goltv2.stopVideo();
+    goltv3.stopVideo();
+  }
+
   var goltvSwiper = new Swiper(".goltv-swiper", {
     spaceBetween: 30,
-    loop: true,
+    //loop: true,
     pagination: {
       el: ".goltv-swiper-page",
       clickable: true
     },
   });  
 
-  // 골고루 티비
-  var swiper = new Swiper(".vod-swiper", {
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
-    loop: true,
-    navigation: {
-      nextEl: ".vod-move.next",
-      prevEl: ".vod-move.prev",
-    },
-    pagination: {
-      el: ".vod-pagenation",
-      clickable: true
-    },
-  });  
+  $('.goltv-swiper .swiper-slide').on('click', function () {
+    const currentlyIndex = $(this).index()
+    console.log('click', currentlyIndex)
+    if (currentlyIndex == 0) {
+      goltv1.playVideo()
+    } else if (currentlyIndex == 1) {
+      goltv2.playVideo()
+    } else {
+      goltv3.playVideo()
+    }
+  })
+
+  goltvSwiper.on('slideChange', function () {
+    stopVideo()
+  })  
 </script>
 </body>
 </html>
