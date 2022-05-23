@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <title>골고루 보상</title>
+</head>
+
+
+<body>
+  <div class="wrap">
+    <header class="l-header-sub">
+  <button class="history-back" aria-label="이전" title="이전페이지로 이동"></button>
+  <h1 class="page-title">@@title</h1>
+  
+</header>
+
+    <hr>
+    
+    <div class="l-container-sub bg-gray">
+      <div class="c-register">
+        <div class="l-row-inner">
+          <!-- formInp -->
+          <div class="formInp">
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="writerName" class="formInp__label required">(필수) 성명</label>
+                <div class="formInp__inpWrap">
+                  <input type="text" id="writerName" class="formInp__inpTxt" placeholder="예) 홍길동" title="성명 입력">
+                </div>
+              </div>
+
+              <div class="formInp__col">
+                <label for="birthDay" class="formInp__label required">(필수) 생년월일</label>
+                <div class="formInp__inpWrap">
+                  <input type="text" id="birthDay" class="formInp__inpTxt" placeholder="예) 1980-01-01" title="생년월일 입력">
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="man" class="formInp__label">성별</label>
+                <div class="formInp__inpWrap">
+                  <div class="formInp__radioSquare grid2">
+                    <input type="radio" id="man" class="formInp__radioSquareInp" name="gender" title="남자 선택">
+                    <label for="man" class="formInp__radioSquareLabel">남자</label>
+                  </div>
+                  <div class="formInp__radioSquare grid2">
+                    <input type="radio" id="woman" class="formInp__radioSquareInp" name="gender" title="여자 선택">
+                    <label for="woman" class="formInp__radioSquareLabel">여자</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="formInp__col">
+                <label for="zipCode" class="formInp__label required">(필수) 우편번호</label>
+                <div class="formInp__inpWrap">
+                  <input type="text" id="zipCode" class="formInp__inpTxt has-btn" placeholder="우편번호">
+                  <button class="formInp__btn">검색</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="addr" class="formInp__label required">(필수) 주소</label>
+                <div class="formInp__inpWrap">
+                  <input type="text" id="addr" class="formInp__inpTxt" title="주소 입력" placeholder="주소">
+                </div>
+                <div class="formInp__inpWrap">
+                  <input type="text" class="formInp__inpTxt" title="나머지 상세 주소 입력" placeholder="(선택) 나머지 상세 주소">
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="pNum" class="formInp__label required">(필수) 휴대전화</label>
+                <div class="formInp__innerRow">
+                  <div class="formInp__inpWrap">
+                    <input type="text" id="pNum" class="formInp__inpTxt has-btn" title="휴대폰 번호 입력" placeholder="휴대폰 번호">
+                    <button class="formInp__btn">인증</button>
+                  </div>
+                  <div class="formInp__inpWrap">
+                    <input type="text" id="pNum2" class="formInp__inpTxt has-btn" title="인증 번호 입력" placeholder="인증 번호">
+                    <button class="formInp__btn">확인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="" class="formInp__label required">(필수) 보험가입 종류 / 복수선택가능 </label>
+                <div class="radio-select-box register">
+                  <ul class="radioList2 grid2">
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField1" name="cField" class="radio__inp">
+                        <label for="cField1" class="radio__label">실손</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField2" name="cField" class="radio__inp">
+                        <label for="cField2" class="radio__label">질병</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField3" name="cField" class="radio__inp">
+                        <label for="cField3" class="radio__label">상해</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField4" name="cField" class="radio__inp">
+                        <label for="cField4" class="radio__label">어린이</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField5" name="cField" class="radio__inp">
+                        <label for="cField5" class="radio__label">태아</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField6" name="cField" class="radio__inp">
+                        <label for="cField6" class="radio__label">차량파손(대물)</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField7" name="cField" class="radio__inp">
+                        <label for="cField7" class="radio__label">교통사고(대인)</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField8" name="cField" class="radio__inp">
+                        <label for="cField8" class="radio__label">배상책임</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField9" name="cField" class="radio__inp">
+                        <label for="cField9" class="radio__label">근로재해</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField10" name="cField" class="radio__inp">
+                        <label for="cField10" class="radio__label">학교안전사고</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField11" name="cField" class="radio__inp">
+                        <label for="cField11" class="radio__label">여행자</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField12" name="cField" class="radio__inp">
+                        <label for="cField12" class="radio__label">골프</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField13" name="cField" class="radio__inp">
+                        <label for="cField13" class="radio__label">치아</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField14" name="cField" class="radio__inp">
+                        <label for="cField14" class="radio__label">연금</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField15" name="cField" class="radio__inp">
+                        <label for="cField15" class="radio__label">도난</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField16" name="cField" class="radio__inp">
+                        <label for="cField16" class="radio__label">화재</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField17" name="cField" class="radio__inp">
+                        <label for="cField17" class="radio__label">재난</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField18" name="cField" class="radio__inp">
+                        <label for="cField18" class="radio__label">생명</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField19" name="cField" class="radio__inp">
+                        <label for="cField19" class="radio__label">침수</label>
+                      </div>
+                    </li>
+                    <li class="radioList__item">
+                      <div class="radio">
+                        <input type="checkbox" id="cField20" name="cField" class="radio__inp">
+                        <label for="cField20" class="radio__label">기타</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="diagnostic" class="formInp__label">(선택) 진단명 또는 진단코드</label>
+                <div class="formInp__inpWrap">
+                  <input type="text" id="diagnostic" class="formInp__inpTxt" placeholder="진단코드 기입 시, 더 정확한 상담이 이루어집니다.">
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <label for="counselCont" class="formInp__label">(선택) 상담 내용</label>
+                <div class="formInp__inpWrap">
+                  <textarea name="" id="counselCont" class="formInp__tArea register" placeholder="상담 내용을 입력해주세요"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="formInp__row">
+              <div class="formInp__col">
+                <!-- 필수/차량일때 -->
+                <label for="attachPic" class="formInp__label required">(필수) 사진 첨부</label>
+                <!-- 필수/차량일때 end -->
+                <!-- 선택/신체일때 -->
+                <!-- <label for="attachPic" class="formInp__label">(필수) 사진 첨부</label> -->
+                <!-- 선택/신체일때 end -->
+                <!-- 선택/재물일때 -->
+                <!-- <label for="attachPic" class="formInp__label">(필수) 사진 첨부</label> -->
+                <!-- 선택/재물일때 end -->
+                <input type="file" id="attachPic" class="formInp__attachPic" multiple="multiple">
+                <div class="formInp__file">
+                  <div class="formInp__fileTop">
+                    <span class="formInp__fileTxt">파일명</span>
+                    <div class="formInp__fileVol">
+                      <span class="formInp__fileVol2">0</span> / 10.00 MB
+                    </div>
+                  </div>
+                  <ul id="fileList">
+                    <!-- <li class="formInp__fileRow">
+                      <span class="formInp__fileName">진단서1.png</span>
+                      <button class="formInp__fileDel btnChip">삭제</button>
+                    </li>
+                    <li class="formInp__fileRow">
+                      <span class="formInp__fileName">진단서2.png</span>
+                      <button class="formInp__fileDel btnChip">삭제</button>
+                    </li>
+                    <li class="formInp__fileRow">
+                      <span class="formInp__fileName">진단서3.png</span>
+                      <button class="formInp__fileDel btnChip">삭제</button>
+                    </li>
+                    <li class="formInp__fileRow">
+                      <span class="formInp__fileName">진단서4.png</span>
+                      <button class="formInp__fileDel btnChip">삭제</button>
+                    </li>
+                    <li class="formInp__fileRow">
+                      <span class="formInp__fileName">진단서5.png</span>
+                      <button class="formInp__fileDel btnChip">삭제</button>
+                    </li> -->
+                  </ul>
+                  <div class="formInp__fileGuide">
+                    <!-- 필수/차량일때 -->
+                    <p class="formInp__fileGuideTxt">(이미지 5장까지 첨부 가능)</p>
+                    <!-- 필수/차량일때 end -->
+                    <!-- 선택/신체일때 -->
+                    <!-- <p class="formInp__fileGuideTxt">
+                      진단서 사진이 첨부될 경우 더 빠른 대응이 가능합니다.<br>
+                      (이미지 5장까지 첨부 가능)
+                    </p> -->
+                    <!-- 선택/신체일때 end -->
+                    <!-- 선택/재물일때 -->
+                    <!-- <p class="formInp__fileGuideTxt">
+                      현장사진 첨부 시에 더 빠른 대응이 가능합니다.<br>
+                      (이미지 5장까지 첨부 가능)
+                    </p> -->
+                    <!-- 선택/재물일때 end -->
+                  </div>
+                </div>
+                <button class="formInp__fileAttach btnChip js-attach-photo">파일첨부</button>
+              </div>
+            </div>
+
+            <ul class="formInp__guide">
+              <li class="formInp__guideItem">사건에 따라 출장이 필요할 수 있으며, 출장 시에 손해사정사에 의해 출장비가 청구될 수 있습니다. 상담 시에 손해사정사에게 문의 및 확인 바랍니다.</li>
+              <li class="formInp__guideItem">접수 후, 모든 손해사정 업무는 손해사정사가 직접 수행해드립니다.<br>골고루보상은 통신판매/불법수수료 등을 지원하지 않으니, 안심하셔도 됩니다.</li>
+            </ul>
+
+            <div class="formInp__agree">
+              <div class="formInp__agreeChk">
+                <input type="checkbox" id="agree" class="formInp__agreeChkBox">
+                <label for="agree" class="formInp__agreeLabel">비회원 개인정보수집 및 이용안내에 동의합니다.</label>
+              </div>
+              <button class="btnChip" onclick="openModal('reception-agree')">내용보기</button>
+            </div>
+
+          </div>
+          <!-- formInp end -->
+          <div class="btn-wrap">
+            <button class="btn btn-radius w-pc-100 theme03" onclick="apply ()">접수 (인증 전)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <footer class="l-footer">
+  <ul class="quickMenu">
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt home">홈</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt agent">독립손사</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt rcm">무료추천</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt case">상담사례</span>
+      </a>
+    </li>
+    <li class="quickMenu__item">
+      <a href="#" class="quickMenu__btn">
+        <span class="quickMenu__txt menu">더보기</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+  </div>
+
+  <div class="modal" data-modal="reception-agree">
+  <div class="modal__container">
+    <div class="modal__contentWrap reception-agree">
+      <h2 class="modal__title">개인정보수집 · 이용 및 제3자제공 사전동의서</h2>
+      <div class="modal__content">
+        <div class="agree-content">
+          <h3 class="agree-content-tit">■  개인정보 수집 · 이용내역</h3>
+          <p class="agree-content-txt1">수집 · 이용 개인정보의 항목</p>
+          <p class="agree-content-txt2">ID, 성명, 생년월일, 주소, 전화번호, 보험종류, 상담 내용 이체</p>
+          <p class="agree-content-txt1">개인정보의 수집 · 이용목적</p>
+          <p class="agree-content-txt2">손해사정 서비스 등</p>
+          <p class="agree-content-txt1">개인정보 이용기간 및 보유기간</p>
+          <p class="agree-content-txt2">문의등록 및 서비스 시점으로부터 5년까지</p>
+          <h3 class="agree-content-tit">■  개인정보 제3자 제공내역</h3>
+          <p class="agree-content-txt1">개인정보를 제공받는 자</p>
+          <p class="agree-content-txt2">매칭 손해사정사</p>
+          <p class="agree-content-txt1">개인정보를 제공받는 자의 개인정보 이용목적</p>
+          <p class="agree-content-txt2">손해사정 서비스 등</p>
+          <p class="agree-content-txt1">제공하는 개인정보의 항목</p>
+          <p class="agree-content-txt2">ID, 성명, 생년월일, 주소, 전화번호, 보험종류, 상담내용 일체</p>
+          <p class="agree-content-txt1">개인정보를 제공받는 자의 개인정보 이용기간 및 보유기간</p>
+          <p class="agree-content-txt2">문의 등록 및 서비스 시점으로부터 5년까지</p>
+          <p class="agree-content-txt3">※ 위의 개인정보 수집 · 이용 및 제공에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 손해사정 서비스 등의 이용에 제한을 받을 수 있습니다.</p>
+        </div>
+      </div>
+      <button class="modal__confirmBtn" onclick="closeModal('reception-agree')"><span class="txt">확인</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="modal" data-modal="reception-done">
+  <div class="modal__container">
+    <div class="modal__contentWrap reception-done">
+      <div class="modal__content">
+        <div class="complete-content">
+          <p class="complete-content-txt1">접수 완료</p>
+          <p class="complete-content-txt2">모든 손해사정 업무는 손해사정사가 직접 수행해드립니다.</p>
+          <p class="complete-content-txt3">
+            상담연결은 24시간 이내 사정에 따라 답변이 늦어질 수 있습니다.<br>
+            주말 및 공휴일, 저녁시간대는 상담이 다음날 이루어질 수 있습니다.
+          </p>
+        </div>
+      </div>
+      <button class="modal__confirmBtn" onclick="closeModal('reception-done')"><span class="txt">확인</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="fullPopup">
+  <div class="fullPopup__in">
+    <div class="fullPopup__header">
+      <h3 class="fullPopup__tit">우편번호 검색</h3>
+    </div>
+    <div class="fullPopup__container">
+      <!-- zipCode -->
+      <div class="zipCode">
+        <div class="zipCode__sch">
+          <div class="formInp__row">
+            <div class="formInp__col">
+              <label for="writerName" class="formInp__label required">(필수) 우편번호</label>
+              <div class="formInp__inpWrap">
+                <input type="text" id="writerName" class="formInp__inpTxt" placeholder="도로명+건물번호,건물명,지번" title="주소 입력" onkeypress="showBtnDel(this)">
+                <button class="formInp__del" title="삭제" onclick="delInpTxt(this)"></button>
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button class="zipCode__schBtn btn w-pc-100 theme03" onclick="searchZipCode()">검색</button>
+          </div>
+        </div>
+        <div class="zipCode__guide">
+          <p class="zipCode__guideTxt1"><em class="themeTxtPoint01">건물번호</em> 또는 <em class="themeTxtPoint01">번지수</em>를 같이 입력하면 더 빨라요!</p>
+          <p class="zipCode__guideTxt2">예시)  한강대로 416<span class="fullPopup__guideTxt2Sub">( 도로명 + 건물번호 )</span></p>
+          <p class="zipCode__guideTxt2">예시)  반포자이아파트<span class="fullPopup__guideTxt2Sub">( 건물명, 아파트명 )</span></p>
+          <p class="zipCode__guideTxt2">예시)  남대문로5가 541<span class="fullPopup__guideTxt2Sub">( 동/읍/면/리 + 번지 )</span></p>
+        </div>
+      </div>
+      <!-- zipCode end -->
+    </div>
+    <button class="fullPopup__close" onclick="closeFullPop(this)" title="우편번호 검색 닫기"></button>
+  </div>
+</div>
+
+<script>
+  // 검색
+  function searchZipCode () {
+    console.log('검색')
+  }
+</script>
+
+<script>
+  // 타이틀
+  $('.page-title').text('상담접수')
+
+  // 하단 메뉴 활성 변수 선언
+  var page = 'matching'
+
+  // 사진첨부
+  // 파일 첨부 버튼
+  $('.js-attach-photo').on('click', function () {
+    $("#attachPic").click()
+  })
+
+  // 파일 첨부할 때 
+  $("#attachPic").on('change', function() {
+      selectFile(this.files);
+  });
+  // 파일 리스트 번호
+  var fileIndex = 0;
+  // 등록할 전체 파일 사이즈
+  var totalFileSize = 0;
+  // 파일 리스트
+  var fileList = new Array();
+  // 파일 사이즈 리스트
+  var fileSizeList = new Array();
+  // 등록 가능한 파일 사이즈 MB
+  var uploadSize = 10;
+  // 등록 가능한 총 파일 사이즈 MB
+  var maxUploadSize = 10;
+
+  // 파일 선택시
+  function selectFile(fileObject) {
+    var files = fileObject;
+
+    // if (fileObject != null) {
+    //   // 파일 Drag 이용하여 등록시
+    //   files = fileObject;
+    // } else {
+    //   // 직접 파일 등록시
+    //   //files = $('#multipaartFileList_' + fileIndex)[0].files;
+    //   files = $('#attachPic').files[0].size;
+    //   console.log('files',)
+    // }
+
+    if (files.length > 3) {
+      alert('파일 첨부는 3개까지 가능합니다.')
+    } else {
+      // 기존등록된 파일 갯수
+      var registeredLeng = $('#fileList .formInp__fileRow').length;
+      console.log('files.length', files.length, registeredLeng)
+
+      if ((registeredLeng + files.length) > 3) {
+        alert('파일 첨부는 3개까지 가능합니다.')
+      } else {
+        // 다중파일 등록
+        if (files != null) {
+          
+          for (var i = 0; i < files.length; i++) {
+            // 파일 이름
+            var fileName = files[i].name;
+            var fileNameArr = fileName.split("\.");
+            // 확장자
+            var ext = fileNameArr[fileNameArr.length - 1];
+            
+            var fileSize = files[i].size; // 파일 사이즈(단위 :byte)
+            console.log("fileSize="+fileSize);
+            if (fileSize <= 0) {
+              console.log("0kb file return");
+              return;
+            }
+            
+            /* if ($.inArray(ext, [ 'exe', 'bat', 'sh', 'java', 'jsp', 'html', 'js', 'css', 'xml' ]) >= 0) {
+              // 확장자 체크
+              alert("등록 불가 확장자");
+              break; */
+            if ($.inArray(ext, [ 'jpg', 'jpeg', 'gif', 'png'  ]) < 0) {
+              // 확장자 체크
+              /* alert("등록이 불가능한 파일 입니다.");
+              break; */
+              alert("등록이 불가능한 파일 입니다.("+fileName+")");
+            } else if (fileSizeMb > uploadSize) {
+              // 파일 사이즈 체크
+              alert("용량 초과\n업로드 가능 용량 : " + uploadSize + " MB");
+              break;
+            } else {
+              // 전체 파일 사이즈
+              totalFileSize += fileSize;
+
+              var fileSizeKb = totalFileSize / 1024; // 파일 사이즈(단위 :kb)
+              var fileSizeMb = fileSizeKb / 1024;    // 파일 사이즈(단위 :Mb)
+
+              var fileSizeStr = "";
+              
+              if ((1024*1024) <= totalFileSize) {    // 파일 용량이 1메가 이상인 경우 
+                console.log("fileSizeMb="+fileSizeMb.toFixed(2));
+                fileSizeStr = fileSizeMb.toFixed(2) + " Mb";
+              } else if ((1024) <= totalFileSize) {
+                console.log("fileSizeKb="+parseInt(fileSizeKb));
+                fileSizeStr = parseInt(fileSizeKb) + " kb";
+              } else {
+                console.log("fileSize="+parseInt(fileSize));
+                fileSizeStr = parseInt(totalFileSize) + " byte";
+              }
+
+              // 파일 배열에 넣기
+              fileList[fileIndex] = files[i];
+
+              // 파일 사이즈 배열에 넣기
+              fileSizeList[fileIndex] = fileSize;
+
+              // 업로드 파일 목록 생성
+              addFileList(fileIndex, fileName, totalFileSize);
+
+              // 파일 번호 증가
+              fileIndex++;
+            }
+          }
+        } else {
+          alert("ERROR");
+        }
+        $('.formInp__fileVol2').text(fileSizeStr)
+        $('.formInp__file').addClass('attached')
+      }
+    }
+  }
+
+  // 업로드 파일 목록 생성
+  function addFileList(fIndex, fileName, fileSizeStr) {
+    var html = `<li id="fileRow` + fIndex + `" class="formInp__fileRow">
+                  <span class="formInp__fileName">` + fileName + `</span>
+                  <button type="button" class="formInp__fileDel btnChip" onclick="deleteFile(` + fIndex + `)">삭제</button>
+                </li>`
+
+    $('#fileList').append(html);
+  }
+
+  // 업로드 파일 삭제
+  function deleteFile(fIndex) {
+    console.log("totalFileSize="+totalFileSize, "deleteFile.fIndex=" + fIndex);
+    
+    // 전체 파일 사이즈 수정
+    totalFileSize -= fileSizeList[fIndex];
+    console.log("afterTotalFileSize="+totalFileSize, fileSizeList[fIndex]);
+    // 전체 파일 사이즈
+    // totalFileSize += fileSize;
+
+    var fileSizeKb = totalFileSize / 1024; // 파일 사이즈(단위 :kb)
+    var fileSizeMb = fileSizeKb / 1024;    // 파일 사이즈(단위 :Mb)
+
+    var fileSizeStr = "";
+
+    if ((1024*1024) <= totalFileSize) {    // 파일 용량이 1메가 이상인 경우 
+      console.log("fileSizeMb="+fileSizeMb.toFixed(2));
+      fileSizeStr = fileSizeMb.toFixed(2) + " Mb";
+    } else if ((1024) <= totalFileSize) {
+      console.log("fileSizeKb="+parseInt(fileSizeKb));
+      fileSizeStr = parseInt(fileSizeKb) + " kb";
+    } else {
+      console.log("fileSize="+parseInt(totalFileSize));
+      fileSizeStr = parseInt(totalFileSize) + " byte";
+    }
+
+    // 파일 배열에서 삭제
+    delete fileList[fIndex];
+
+    // 파일 사이즈 배열 삭제
+    delete fileSizeList[fIndex];
+
+    // 업로드 파일 테이블 목록에서 삭제
+    $("#fileRow" + fIndex).remove();
+
+    if (totalFileSize > 0) {
+      console.log('totalFileSize over zero')
+      $('.formInp__fileVol2').text(fileSizeStr)
+    } else {
+      console.log('totalFileSize zero')
+      $('.formInp__fileVol2').text(0)
+      $('.formInp__file').removeClass('attached')
+    }
+  }
+
+  // 파일 등록
+  function uploadFile() {
+    // 등록할 파일 리스트
+    var uploadFileList = Object.keys(fileList);
+
+    // 파일이 있는지 체크
+    if (uploadFileList.length == 0) {
+      // 파일등록 경고창
+      alert("파일이 없습니다.");
+      return;
+    }
+
+    // 용량을 넘을 경우 업로드 불가
+    if (totalFileSize > maxUploadSize) {
+      // 파일 사이즈 초과 경고창
+      alert("총 용량 초과\n총 업로드 가능 용량 : " + maxUploadSize + " MB");
+      return;
+    }
+
+    if (confirm("등록 하시겠습니까?")) {
+      // 등록할 파일 리스트를 formData로 데이터 입력
+      var form = $('#uploadForm');
+      var formData = new FormData(form);
+      for (var i = 0; i < uploadFileList.length; i++) {
+        formData.append('files', fileList[uploadFileList[i]]);
+      }
+
+      $.ajax({
+        url : "업로드 경로",
+        data : formData,
+        type : 'POST',
+        enctype : 'multipart/form-data',
+        processData : false,
+        contentType : false,
+        dataType : 'json',
+        cache : false,
+        success : function(result) {
+          if (result.data.length > 0) {
+              alert("성공");
+              location.reload();
+          } else {
+              alert("실패");
+              location.reload();
+          }
+        }
+      });
+    }
+  }
+
+  // 상담신청
+  function apply () {
+    console.log('상담신청')
+    openModal('reception-done')
+  }
+</script>
+</body>
+</html>

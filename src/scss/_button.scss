@@ -21,6 +21,11 @@
   &.theme05{
     background: $themeColor05;
   }
+  &.themeWhite{
+    color: #111;
+    background: $themeWhite;
+    border: solid 1px #e9eaee;
+  }
 }
 
 .btn-radius {

@@ -1,0 +1,57 @@
+<div class="fullPopup">
+  <div class="fullPopup__in">
+    <div class="fullPopup__header">
+      <h3 class="fullPopup__tit">우편번호 검색</h3>
+    </div>
+    <div class="fullPopup__container">
+      <!-- zipCode -->
+      <div class="zipCode">
+        <div class="zipCode__sch">
+          <div class="formInp__row">
+            <div class="formInp__col">
+              <label for="writerName" class="formInp__label required">(필수) 우편번호</label>
+              <div class="formInp__inpWrap">
+                <input type="text" id="writerName" class="formInp__inpTxt" placeholder="도로명+건물번호,건물명,지번" title="주소 입력" onkeypress="showBtnDel(this)">
+                <button class="formInp__del" title="삭제" onclick="delInpTxt(this)"></button>
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button class="zipCode__schBtn btn w-pc-100 theme03" onclick="searchZipCode()">검색</button>
+          </div>
+        </div>
+        <div class="zipCode__result">
+          <div class="zipCode__resultHead">
+            <p class="zipCode__resultHeadTxt">검색결과 <em>0</em> 건</p>
+          </div>
+          <div class="zipCode__resultCont">
+            <div class="zipCode__noData">
+              <p class="zipCode__noDataTxt">검색 결과가 없습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- zipCode end -->
+    </div>
+    <button class="fullPopup__close" onclick="closeFullPop(this)" title="우편번호 검색 닫기"></button>
+  </div>
+</div>
+
+<script>
+  // 검색
+  function searchZipCode () {
+    console.log('검색')
+  }
+
+  // 주소선택
+  function pickAddr (obj) {
+    var addr = $(obj)
+    const addrTxt = addr.text()
+    console.log('주소선택', addr, addrTxt)
+  }
+
+  // 더보기
+  function moreZipCode () {
+    console.log('더보기')
+  }
+</script>

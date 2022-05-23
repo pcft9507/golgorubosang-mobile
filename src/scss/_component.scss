@@ -788,6 +788,175 @@
   }
 }
 
+.zipCode {
+  height: 100%;
+
+  &__sch {
+    height: 157px;
+    padding: 16px;
+  }
+
+  &__schBtn {
+    height: 42px;
+    margin-top: 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &__guide {
+    padding: 16px;
+
+    &Txt1 {
+      margin-bottom: 17px;
+      color: #111;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: -0.84px;
+    }
+
+    &Txt2 {
+      margin-top: 8px;
+      color: #1b2432;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: -0.78px;
+
+      &Sub {
+        margin-left: 4px;
+        color: #787e85;
+      }
+    }
+  }
+
+  &__result {
+    height: calc(100% - 157px);
+    border-top: 1px solid #e9eaee;
+
+    &Head {
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding-left: 26px;
+      background: #f9f9fa;
+
+      &Txt {
+        color: #111;
+        font-size: 12px;
+        line-height: 16px;
+
+        em {
+          color: $themeColor03;
+        }
+      }
+    }
+
+    &Cont {
+      position: relative;
+      height: calc(100% - 28px);
+    }
+
+    &List {
+      height: calc(100% - 65px);
+      overflow-y: auto;
+      padding: 0 16px;
+
+      &Item {
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(192, 193, 202, 0.6);
+  
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      &Row {
+        display: flex;
+        align-items: center;
+
+        & + .zipCode__resultListRow {
+          margin-top: 4px;
+        }
+      }
+
+      &Ctg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 20px;
+        padding-top: 1px;
+        color: #787e85;
+        font-size: 10px;
+        border: 1px solid rgba(112, 112, 112, 0.2);
+      }
+
+      &Addr {
+        width: calc(100% - 44px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-left: 8px;
+        color: #1b2432;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+    
+    .btn-wrap {
+      padding: 0 16px;
+
+      .btn {
+        height: 44px;
+        border-radius: 4px;
+      }
+
+      .txt {
+        position: relative;
+        padding-right: 28px;
+        font-weight: 500;
+        font-size: 16px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 20px;
+          height: 20px;
+          background: url($imgCommon + 'icon-more-drop.png') 0 0/100%;
+        }
+      }
+    }
+  }
+
+  &__noData {
+    padding-top: 80px;
+
+    &Txt {
+      position: relative;
+      padding-top: 100px;
+      color: #1b2432;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 84px;
+        height: 84px;
+        background: url($imgSub + 'img-event-caution.png') 0 0/100%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   
   .summaryCard__badge {

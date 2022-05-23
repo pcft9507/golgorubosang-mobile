@@ -46,23 +46,25 @@ $.fn.textArea = function () {
   })
 }
 
-// formInp 
-$.fn.formInpTxt = function () {
-  var inpBody = Array
-  return this.each(function (i) {
-    inpBody[i] = $(this)
-    var input = inpBody[i].children('.formInp__txt')
-    var btnDel = inpBody[i].children('.js-del')
-    input.on('keyup', function () {
-      var txtLeng = $(this).val().length
-      if (txtLeng > 0) {
-        $(this).next('.formInp__del').show()
-      } else {
-        $(this).next('.formInp__del').hide()
-      }
-    })
-  })
+// input 텍스트 삭제
+function showBtnDel (obj) {
+  var inpTxt = $(obj)
+  if(inpTxt.val().length > 0) {
+    inpTxt.next().show()
+  }
 }
+function delInpTxt (obj) {
+  var delBtn = $(obj)
+  delBtn.prev().val('')
+  delBtn.hide();
+}
+
+// 풀팝업
+function closeFullPop (el) {
+  const btnClose = $(el)
+  btnClose.parents('.fullPopup').hide()
+}
+
 
 // 손해사 매칭 키워드 검색
 $.fn.matchingSch = function () {

@@ -1,0 +1,43 @@
+.fullPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  &__in {
+    position: relative;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    border-bottom: 1px solid #e9eaee;
+  }
+
+  &__tit {
+    color: #111;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__container {
+    height: calc(100% - 44px);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background: url($imgCommon + 'ico-close-full-pop.png') 0 0/100%;
+  }
+}

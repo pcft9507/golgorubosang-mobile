@@ -125,6 +125,7 @@
   }
 
   &__inpWrap {
+    position: relative;
 
     & + .formInp__inpWrap {
       margin-top: 4px;
@@ -378,5 +379,16 @@
       color: #787e85;
       font-weight: 400;
     }
+  }
+
+  &__del {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    background: url($imgCommon + 'ico-searched-del.png') 0 0/100%;
+    transform: translateY(-50%);
   }
 }
