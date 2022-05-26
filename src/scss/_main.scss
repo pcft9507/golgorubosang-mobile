@@ -67,6 +67,57 @@
         margin-top: -88px;
       }
 
+      .bottom-link {
+        padding-top: 12px;
+
+        &-item {
+          margin-top: 8px;
+        }
+
+        &-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          height: 48px;
+          border-radius: 24px;
+          box-shadow: 0 2px 4px 0 rgba(5, 5, 5, 0.2);
+          background-color: #394048;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            width: 24px;
+            height: 24px;
+            background: url($imgMain + 'ico-main-vs-btn.png') 0 0/72px no-repeat;
+          }
+
+          &.kakao {
+
+            &::before {
+              background-position: -24px 0;
+            }
+          }
+
+          &.cs {
+
+            &::before {
+              background-position: -48px 0;
+            }
+          }
+
+          .txt {
+            color: #fff;
+            font-weight: 600;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+          }
+        }
+      }
+
       .list-item {
         width: calc(50% - 8px);
         height: 142px;
@@ -159,8 +210,8 @@
       }
 
       .bottom-txt1 {
-        margin-top: 20px;
-        color: #04C977;
+        margin-top: 36px;
+        color: #fff;
         font-weight: 500;
         font-size: 13px;
         line-height: 18px;
