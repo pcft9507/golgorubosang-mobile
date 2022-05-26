@@ -48,7 +48,7 @@ function htmlComplie() {
       prefix: '@@',
       basepath: '@file',
       context: {
-        kakao: false
+        subHeaderMenu: false,
       }
     }))
     .pipe(gulp.dest(paths.html))
