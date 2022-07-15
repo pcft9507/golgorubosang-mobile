@@ -807,6 +807,7 @@
   }
 
   .partner {
+    padding-bottom: 16px;
 
     .partner-ban {
       display: flex;
@@ -817,6 +818,8 @@
       margin-bottom: -8px;
 
       .ban-item {
+        position: relative;
+        top: 0;
         width: calc(33.3333% - 5px);
         margin: 0 0 8px 8px;
 
