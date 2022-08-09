@@ -604,7 +604,6 @@
     var partnerBanMove = function () {
       var partnerBan = $('.partner-ban');
       var banItemH = partnerBan.children().height();
-      var index = 1;
       setInterval(function () {
         var banItem = partnerBan.children();
         banItem.animate({
@@ -620,9 +619,7 @@
           partnerBan.append(getItem[1]);
           partnerBan.append(getItem[2]);
         }, 1000)
-        index++
       }, 3000)
-      console.log('partnerBanMove', banItemH);
     }()
   }
 </script>
