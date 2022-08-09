@@ -1,0 +1,53 @@
+// 버튼 색상
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: #fff;
+
+  &.theme01{
+    background: $themeColor01;
+  }
+  &.theme02{
+    background: $themeColor02;
+  }
+  &.theme03{
+    background: $themeColor03;
+  }
+  &.theme04{
+    background: $themeColor04;
+  }
+  &.theme05{
+    background: $themeColor05;
+  }
+  &.themeWhite{
+    color: #111;
+    background: $themeWhite;
+    border: solid 1px #e9eaee;
+  }
+}
+
+.btn-radius {
+  height: var(--height);
+  border-radius: calc(var(--height)/2);
+}
+
+.btn-wrap {
+  display: flex;
+}
+
+.btnChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 24px;
+  background: #fff;
+  border-radius: 16px;
+  border: solid 1px #c0c1ca;
+  color: #111;
+  font-weight: 500;
+  font-size: 10px;
+  box-shadow: 0 1px 2px rgba(17, 17, 17, 0.2)
+}
