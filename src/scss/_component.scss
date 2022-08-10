@@ -121,6 +121,8 @@
 }
 
 .chipCtg {
+  display: inline-flex;
+  align-items: center;
   height: 22px;
   padding: 0 6px;
   color: #fff;
@@ -450,7 +452,15 @@
   }
 
   &__badge {
-    display: flex;
+    overflow: hidden;
+    height: 25px;
+  }
+
+  &__badge-in {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 30px;
   }
 
   &__list {
